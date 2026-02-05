@@ -20,7 +20,7 @@ integrated with Google Maps for precise navigation.
 
 ## Installation & Setup
 - ```bash
-- git clone 
+- git clone https://github.com/ivailoiliev89-netizen/Pleven-Fishing.git
 - After installation, the user must log in to /admin and add objects with photos
 - Create a .env file and populate it with your DB credentials (see settings.py for required keys).
 - pip install -r requirements.txt
@@ -31,5 +31,6 @@ integrated with Google Maps for precise navigation.
 - Integration with a Weather API for real-time fishing conditions.
 - User-submitted fishing reports with photo uploads.
 - Interactive "Catch Map" using Leaflet.js.
+
 
 
