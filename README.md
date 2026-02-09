@@ -31,6 +31,7 @@ integrated with Google Maps for precise navigation.
 - Integration with a Weather API for real-time fishing conditions.
 - User-submitted fishing reports with photo uploads.
 - Interactive "Catch Map" using Leaflet.js.
+- Implement the logic from my Blog-Project
 
 
 
