@@ -8,13 +8,15 @@ integrated with Google Maps for precise navigation.
 
 ## Key Features
 - Dynamic Content Management: Fully managed via Django Admin.
-- Advanced Filtering: Custom-built logic to filter locations by methods (Feeder, Spinning, etc.) using Django ManyToMany relationships.
-- Geospatial Integration: Embedded Google Maps API for real-time location tracking.
-- SEO & UX Focused: Clean, semantic HTML5, responsive CSS (Flexbox/Grid), and optimized typography (Google Fonts).
+- Relational Data Structure: Link fishing reports (Posts) to specific locations using Django `ForeignKey`.
+- Filtering: Custom-built logic to filter locations by methods (Feeder, Spinning, etc.) using `ManyToMany` relationships.
+- Geospatial Integration: Embedded Google Maps API for precise location tracking.
+- Frontend: Clean, semantic HTML and modular CSS architecture.
+- SEO & UX Focused: Responsive design (Flexbox/Grid) with optimized typography (Google Fonts).
 
 ## Technical Stack
-- Backend: Python , Django Rest Framework
-- Database: PostgreSQL
+- Backend: Python , Django 
+- Database: PostgreSQL (for Production) / SQL (for Development)
 - Frontend: HTML, CSS, JavaScript
 - Environment Management: Python-dotenv for secure credential handling.
 
@@ -29,9 +31,4 @@ integrated with Google Maps for precise navigation.
 
 ## Future Improvements
 - Integration with a Weather API for real-time fishing conditions.
-- User-submitted fishing reports with photo uploads.
 - Interactive "Catch Map" using Leaflet.js.
-- Implement the logic from my Blog-Project
-
-
-
