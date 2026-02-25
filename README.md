@@ -1,12 +1,12 @@
 # PlevenFishing Atlas
-A Full-Stack Geospatial Directory for Anglers
 
-## Overview
-PlevenFishing is a specialized web platform designed for the angling community in the Pleven region, Bulgaria.
-It provides a curated database of fishing locations, categorized by water body type and fishing methods,
-integrated with Google Maps for precise navigation.
+### A Full-Stack Geospatial Directory for Anglers in Pleven Region, Bulgaria
 
-## Key Features
+**PlevenFishing** is a robust web platform that centralizes angling intelligence for the Pleven region.
+It bridges the gap between static location data and dynamic user needs through a custom-built filtering system and Google Maps integration.
+
+## Key Technical Features
+
 - Dynamic Content Management: Fully managed via Django Admin.
 - Relational Data Structure: Link fishing reports (Posts) to specific locations using Django `ForeignKey`.
 - Filtering: Custom-built logic to filter locations by methods (Feeder, Spinning, etc.) using `ManyToMany` relationships.
@@ -15,12 +15,14 @@ integrated with Google Maps for precise navigation.
 - SEO & UX Focused: Responsive design (Flexbox/Grid) with optimized typography (Google Fonts).
 
 ## Technical Stack
-- Backend: Python , Django 
-- Database: PostgreSQL (for Production) / SQL (for Development)
-- Frontend: HTML, CSS, JavaScript
-- Environment Management: Python-dotenv for secure credential handling.
+
+- **Backend**: Python , Django 
+- **Database**: PostgreSQL
+- **Frontend**: HTML5, CSS (Flexbox and Grid), JavaScript
+- **Environment Management**: Python-dotenv for secure credential handling.
 
 ## Installation & Setup
+
 - ```bash
 - git clone https://github.com/ivailoiliev89-netizen/Pleven-Fishing.git
 - After installation, the user must log in to /admin and add objects with photos
@@ -30,5 +32,6 @@ integrated with Google Maps for precise navigation.
 - python manage.py runserver
 
 ## Future Improvements
+
 - Integration with a Weather API for real-time fishing conditions.
 - Interactive "Catch Map" using Leaflet.js.
