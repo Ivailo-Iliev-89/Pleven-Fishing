@@ -21,16 +21,6 @@ It bridges the gap between static location data and dynamic user needs through a
 - **Environment Management**: Python-dotenv for secure credential handling.
 - **API**: Google Maps JavaScript API
 
-## Instructions to setup
-
-- ```bash
-- git clone https://github.com/ivailoiliev89-netizen/Pleven-Fishing.git
-- After installation, the user must log in to /admin and add objects with photos.
-- Create a .env file and populate it with your DB credentials (see settings.py for required keys).
-- pip install -r requirements.txt
-- python manage.py migrate
-- python manage.py runserver
-  
 ## What I Learned
 
 - **API Integration**: Gained experience in integrating and customizing third-party services like the Google Maps JavaScript API for real-world applications.
@@ -38,7 +28,26 @@ It bridges the gap between static location data and dynamic user needs through a
 - **Environment Security**: Learned the importance of securing sensitive data (API keys, DB credentials) using `python-dotenv` to follow industry best practices.
 - **Data Modeling**: Understood how to design a relational schema that connects geographical locations with user-contributed reports and fishing methods.
 
-## Future Improvements
+## Instructions to setup
+
+- ```bash
+- git clone https://github.com/ivailoiliev89-netizen/Pleven-Fishing.git
+- After installation, the user must log in to /admin and add objects with photos.
+- Create a .env file and populate it with your DB credentials (see settings.py for required keys).
+- pip install -r requirements.txt
+- python manage.py makemigrations 
+- python manage.py migrate
+- python manage.py createsuperuser
+- python manage.py runserver
+
+  ## 📖 Usage
+  
+* **Explore Locations**: Navigate through the curated database of fishing spots in the Pleven region.
+* **Geospatial Navigation**: Click on the embedded Google Maps links to get precise GPS directions to each spot.
+* **Filter by Method**: Use the dynamic filter buttons to find spots suitable for specific techniques like "Spinning" or "Feeder".
+* **Manage Content**: Access the Django Admin panel to add new locations, update photos, or manage fishing reports.
+
+* ## Future Improvements
 
 - Integration with a Weather API for real-time fishing conditions.
 - Interactive "Catch Map" using Leaflet.js.
