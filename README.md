@@ -2,7 +2,7 @@
 
 ### A Full-Stack Geospatial Directory for Anglers in Pleven Region, Bulgaria
 
-***PlevenFishing***  is a robust web platform that centralizes angling intelligence for the Pleven region.
+***GeoAngler***  is a robust web platform that centralizes angling intelligence for the Pleven region.
 It bridges the gap between static location data and dynamic user needs through a custom-built filtering system and Google Maps integration.
 
 
@@ -57,6 +57,7 @@ It bridges the gap between static location data and dynamic user needs through a
 
 - ***Integration***  with a ***Weather API*** for real-time fishing conditions..
 - ***Interactive***  "Catch Map" using ***Leaflet.js***..
+
 
 
 
