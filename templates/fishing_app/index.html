@@ -8,38 +8,33 @@
         <p>Discover the best fishing spots, the right techniquies,
             tips for succesful fishing in the heart of Moesia
         </p>
-        
         <div class="hero-buttons">
             <a href="#places" class="btn-primary">Check out the places</a>
-            
-            <div id="places" class="places-grid">
-                {% for place in places %}
-                    {% endfor %}
-            </div>
         </div>
     </div>
 </section>
 
-<div class="places-grid">
+<div id="places-anchor" class="places-grid">
     {% for place in places %}
-    <div class="place-card">
-        <div class="place-image">
-            {% if place.image %}
-                <img src="{{ place.image.url }}" alt="{{ place.name }}">
-            {% endif %}
-            <span class="badge">{{ place.get_place_type_display }}</span>
-        </div>
-        <div class="place-info">
-            <h3>{{ place.name }}</h3>
-            <p>{{ place.description|truncatewords:15 }}</p>
-            <div class="tags">
-                {% for fish in place.fishes.all|slice:":3" %}
-                    <span class="fish-tag">🐟 {{ fish.name }}</span>
-                {% endfor %}
+        <div class="place-card">
+            <div class="place-image">
+                {% if place.image %}
+                    <img src="{{ place.image.url }}" alt="{{ place.name }}">
+                {% endif %}
+                <span class="badge">{{ place.get_place_type_display }}</span>
             </div>
-            <a href="{% url 'place_detail' place.slug %}" class="btn-more">More details</a>
+            <div class="place-info">
+                <h3>{{ place.name }}</h3>
+                <p>{{ place.description|truncatechars:100 }}</p>
+                <div class="tags">
+                    {% for fish in place.fishes.all|slice:":3" %}
+                        <span class="fish-tag">🐟 {{ fish.name }}</span>
+                    {% endfor %}
+                </div>
+                <a href="{% url 'place_detail' place.slug %}" class="btn-more">More details</a>
+            </div>
         </div>
-    </div>
     {% endfor %}
 </div>
+
 {% endblock %}
