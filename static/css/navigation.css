@@ -19,12 +19,8 @@
     align-items: center;
     gap: 10px;
 }
-.logo a:hover {color: #ffca28;transition: 0.3s;}
-.nav-links {
-    list-style: none;
-    display: flex;
-    gap: 25px;
-}
+.logo a:hover { color: #ffca28;transition: 0.3s; }
+.nav-links { list-style: none; display: flex; gap: 25px; }
 .nav-links a {
     color: white;
     text-decoration: none;

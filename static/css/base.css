@@ -6,7 +6,6 @@ body {
     margin: 0;
     line-height: 1.6;
 }
-
 h1, h2, h3 {
     font-family: 'Oswald', sans-serif;
     text-transform: uppercase;
@@ -14,13 +13,7 @@ h1, h2, h3 {
     color: #1a3c34;
     text-align: center;
 }
-
-.container {
-    max-width: 1200px;
-    margin: 0 auto;
-    padding: 0 20px;
-}
-
+.container {max-width: 1200px;margin: 0 auto;padding: 0 20px;}
 
 /*-- Footer Section --*/
 .site-footer {

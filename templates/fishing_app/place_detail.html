@@ -62,7 +62,40 @@
 
 <div class="user-reports-container">
     <h3 class="section-title"> Fishing Reports & Photos for {{ place.name }}</h3>
-    
+
+    {% if user.is_authenticated %}
+    <div class="add-report-form">
+        <h4><span style="color: #ffca28;">🎣</span> Share your adventure</h4>
+        <form method="post" enctype="multipart/form-data" class="fishing-form">
+            {% csrf_token %}
+            
+            <div class="form-group">
+                <label>Title of your catch:</label>
+                {{ form.title }}
+            </div>
+
+            <div class="form-row">
+                <div class="form-group">
+                    <label>Photo (optional):</label>
+                    {{ form.image }}
+                </div>
+            </div>
+
+            <div class="form-group">
+                <label>Tell us more (bait, weather, equipment):</label>
+                {{ form.content }}
+            </div>
+
+            <button type="submit" class="btn-submit-report">Post Report →</button>
+        </form>
+    </div>
+
+    {% else %}
+    <div class="login-prompt">
+        <p>Want to share your catch? <a href="{% url 'login' %}">Log in here</a>.</p>
+    </div>
+    {% endif %}
+
     <div class="reports-grid">
         {% for post in place.posts.all %} 
             <div class="report-card">

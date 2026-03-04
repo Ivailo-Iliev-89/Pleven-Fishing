@@ -35,10 +35,7 @@
     border-radius: 15px;
     box-shadow: 0 4px 15px rgba(0,0,0,0.05);
 }
-.method-header {
-    text-align: center;
-    margin-bottom: 30px;
-}
+.method-header {text-align: center;margin-bottom: 30px;}
 .method-icon img {
     width: 250px;
     height: auto;
@@ -70,15 +67,8 @@
     font-weight: 500;
     transition: color 0.3s;
 }
-.info-sidebar .nav-links li a:hover {
-    color: #ffca28;
-    text-decoration: underline;
-}
-.location-tag {
-    color:rgb(52, 83, 131);
-    font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-    font-size: 1.5rem;
-}
+.info-sidebar .nav-links li a:hover {color: #ffca28; text-decoration: underline;}
+.location-tag {color:rgb(52, 83, 131); font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; font-size: 1.5rem;}
 
 /*-- Added fish --*/
 .fish-item {
@@ -91,10 +81,7 @@
 }
 
 /*-- Google Maps --*/
-.map-container {
-    margin-top: 30px;
-    margin-bottom: 50px;
-}
+.map-container {margin-top: 30px;margin-bottom: 50px;}
 .responsive-map {
     position: relative;
     overflow: hidden;
@@ -131,7 +118,4 @@
     margin-bottom: 20px;
     font-weight: 400;
 }
-.place-description-text p strong {
-    color: #1a3c34;
-    font-weight: 700;
-}
+.place-description-text p strong {color: #1a3c34;font-weight: 700;}

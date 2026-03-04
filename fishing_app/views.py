@@ -1,11 +1,11 @@
-from django.shortcuts import render, get_object_or_404
-from .models import FishingPlace, Method, Fish
-
-# Must change the all def with class based-views , for more practice
-# from django.views.generic import ListView,DetailView, DeleteView, UpdateView, CreateView
-
+from django.shortcuts import render, get_object_or_404, redirect
+from .models import FishingPlace, Method
+from blog.forms import ReportPostForm
+from blog.models import Post
 
 # The home page
+
+
 def index(request):
     places = FishingPlace.objects.all()
     return render(request, 'fishing_app/index.html', {'places': places})
@@ -15,7 +15,26 @@ def index(request):
 
 def place_detail(request, slug):
     place = get_object_or_404(FishingPlace, slug=slug)
-    return render(request, 'fishing_app/place_detail.html', {'place': place})
+
+    # Show ReportPostForm from database to user
+    posts = place.posts.filter(status='1').order_by('created_on')
+    if request.method == 'POST':
+        form = ReportPostForm(request.POST, request.FILES)
+        if form.is_valid():
+            new_post = form.save(commit=False)
+            new_post.location = place
+            new_post.author = request.user
+            new_post.status = '1'
+            new_post.save()
+            return redirect('place_detail', slug=slug)
+    else:
+        form = ReportPostForm()
+
+    return render(request, 'fishing_app/place_detail.html', {
+        'place': place,
+        'posts': posts,
+        'form': form
+    })
 
 # Filter by methods of fishing
 

@@ -1,6 +1,6 @@
 from django.db import models
 from django.contrib.auth.models import User
-from slugify import slugify
+from django.utils.text import slugify
 from fishing_app.models import FishingPlace
 
 

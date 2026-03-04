@@ -122,3 +122,23 @@
     box-shadow: 0 6px 20px rgba(0,0,0,0.3);
     color: #1a3c34;
 }
+
+.btn-submit-report {
+    background: #1a3c34;
+    color: #ffffff;
+    padding: 15px 35px;
+    border: none;
+    border-radius: 50px;
+    font-weight: bold;
+    font-size: 1rem;
+    cursor: pointer;
+    transition: all 0.3s;
+    display: inline-block;
+}
+
+.btn-submit-report:hover {
+    background: #ffca28;
+    color: #1a3c34;
+    transform: translateY(-2px);
+    box-shadow: 0 4px 12px rgba(0,0,0,0.15);
+}
