@@ -5,10 +5,11 @@
 <div class="method-page-container">
     <div class="method-header">
         <div class="method-icon">
-
-            {% with "images/"|add:method.slug|add:".jpg" as image_path %}
-                <img src="{% static image_path %}" alt="{{ method.name }}" 
-            {% endwith %}
+            {% if method.image %}
+                <img src="{{ method.image.url }}" alt="{{ method.name }}" class="method-img-header">
+            {% else %}
+                <img src="{% static 'images/default-method.jpg' %}" alt="Default" class="method-img-header">>
+            {% endif %}
         </div>
 
         <h1>Method: {{ method.name }}</h1>

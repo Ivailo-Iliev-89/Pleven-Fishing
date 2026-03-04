@@ -7,6 +7,7 @@ class Method(models.Model):
     slug = models.SlugField(unique=True, blank=True)
     description = models.TextField(
         blank=True, verbose_name='Description of the tactic')
+    image = models.ImageField(upload_to='methods/', null=True, blank=True)
 
     def save(self, *args, **kwargs):
         if not self.slug:
