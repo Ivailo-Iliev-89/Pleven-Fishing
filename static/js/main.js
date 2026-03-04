@@ -5,8 +5,7 @@ document.addEventListener('DOMContentLoaded', function() {
         dropdown.addEventListener('click', function(e) {
             e.preventDefault();
             const content = this.nextElementSibling;
-            
-            // Затваряме другите отворени менюта
+           
             document.querySelectorAll('.dropdown-content').forEach(el => {
                 if (el !== content) el.classList.remove('show');
             });
@@ -15,7 +14,6 @@ document.addEventListener('DOMContentLoaded', function() {
         });
     });
 
-    // Затваряне при клик извън менюто
     window.onclick = function(event) {
         if (!event.target.matches('.dropdown-toggle')) {
             document.querySelectorAll('.dropdown-content').forEach(el => {

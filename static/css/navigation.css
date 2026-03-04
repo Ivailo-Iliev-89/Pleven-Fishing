@@ -33,7 +33,12 @@
 /*-- Dropdown menu --*/
 .dropdown {position: relative;}
 .dropdown-content {
-    display: none;
+    display: block;
+    visibility: hidden;
+    opacity: 0;
+    transform: translateY(-10px);
+    transition: all 0.3 ease;
+    pointer-events: none;
     position: absolute;
     background-color: #ffffff;
     min-width: 200px;
@@ -58,4 +63,4 @@
     text-transform: uppercase;
     font-weight: bold;
 }
-.dropdown:hover .dropdown-content {display: block;}
+.dropdown:hover .dropdown-content {visibility: visible;opacity: 1;transform: translateY(0);pointer-events: auto;}
