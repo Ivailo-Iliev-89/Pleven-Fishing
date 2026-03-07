@@ -34,10 +34,11 @@ h1, h2, h3 {
 .footer-section h4 {
     color: #ffca28;
     margin-bottom: 15px;
-    margin-top:15px;
+    margin-top: 15px;
     font-size: 1.2rem;
+    font-family:Georgia, 'Times New Roman', Times, serif;
 }
-.footer-section ul {list-style: none; padding: 0; color: #ffffff;}
-.footer-section ul li { margin-bottom: 10px; }
+.footer-section ul {list-style: none; padding: 0; color: #ffffff;font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;}
+.footer-section ul li { margin-bottom: 10px;font-style: italic; }
 .footer-section a { color: #bdc3c7; text-decoration: none; transition: 0.3s; }
 .footer-section a:hover {color: #ffffff; padding-left: 5px;}

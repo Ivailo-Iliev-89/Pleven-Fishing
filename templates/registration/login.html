@@ -1,0 +1,20 @@
+{% extends 'base.html' %}
+{% block content %}
+
+<div class="login-container">
+    <h2>GeoAngler Login</h2>
+    <p>Welcome back again, dear Fisher !</p>
+
+    <form method="post" class="fishing-form">
+        {% csrf_token %}
+        <div class="sign-up-form">{{ form.as_p }}</div>
+        <button type="submit" class="btn-submit-report">Login</button>
+    </form>
+
+    <div class="register-form">
+        <p>You dont't have a profile ?
+            <a href="{% url 'signup' %}">Sign up here</a>
+        </p>
+    </div>
+</div>
+{% endblock %}

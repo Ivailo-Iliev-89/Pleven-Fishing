@@ -5,8 +5,9 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Fishing Atlas</title>
+    <title>GeoAngler</title>
     <link href="https://fonts.googleapis.com/css2?family=Oswald:wght@500;700&family=Roboto:wght@300;400&family=Montserrat:ital,wght@0,400;0,700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="{% static 'css/auth.css' %}">
     <link rel="stylesheet" href="{% static 'css/base.css' %}">
     <link rel="stylesheet" href="{% static 'css/navigation.css' %}">
     <link rel="stylesheet" href="{% static 'css/fishing_cards.css' %}">
@@ -18,7 +19,7 @@
 <nav class="navbar">
     <div class="logo">
         <a href="{% url 'index' %}">
-            🎣 PlevenFishing
+            🎣 GeoAngler 🎣 
         </a>
     </div>
     
@@ -51,6 +52,25 @@
                 {% endfor %}
             </div>
         </li>
+
+        <ul class="nav-links">
+            {% if user.is_authenticated %}
+            <li class="nav-user-item">
+                <span class="user-greeting">Hello,Fisher {{ user.username }}!</span>
+            </li>
+
+            <li>
+                <form action="{% url 'logout' %}" method="post" style="display: inline;">
+                    {% csrf_token %}
+                    <button type="submit" class="logout-link">Logout</button>
+                </form>
+            </li>
+
+            {% else %}
+            <li><a href="{% url 'login' %}" class="auth-btn login-btn">Login</a></li>
+            <li><a href="{% url 'signup' %}" class="auth-btn logout-btn">Sign Up</a></li>
+            {% endif %}
+        </ul>
     </ul>
 </nav>
 
@@ -62,7 +82,7 @@
 <footer class="site-footer">
     <div class="footer-content">
         <div class="footer-section">
-            <h4>PlevenFishing</h4>
+            <h4>&copy; GeoAngler</h4>
             <p>Your guide to the best fishing spots in the Pleven region.<br/>
                 Discover new horizons for your favorite hobby.  
             </p>
@@ -80,8 +100,9 @@
         <div class="footer-section">
             <h4>Contacts</h4>
             <ul>
-                <li>Adress</br>Pleven City, Bulgaria</li>
-                <li>Email</br>info@plevenfishing.bg</li>
+                <li>Phone:</br>+359-897-654-321</li>
+                <li>Adress:</br>Pleven City, Bulgaria</li>
+                <li>Email:</br>fishing@geoangler.bg</li>
             </ul>
         </div>
     </div>

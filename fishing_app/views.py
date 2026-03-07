@@ -2,7 +2,8 @@ from django.shortcuts import render, get_object_or_404, redirect
 from .models import FishingPlace, Method
 from blog.forms import ReportPostForm
 from blog.models import Post
-
+from django.contrib.auth.forms import UserCreationForm
+from django.contrib.auth import login
 # The home page
 
 
@@ -65,3 +66,16 @@ def about(request):
 
 def advices(request):
     return render(request, 'fishing_app/advices.html')
+
+
+def signup(request):
+    if request.method == 'POST':
+        form = UserCreationForm
+        if form.is_valid:
+            user = form.save()
+            login(request, user)
+            return redirect('index')
+    else:
+        form = UserCreationForm
+
+    return render(request, 'registration/signup.html', {'form': form})

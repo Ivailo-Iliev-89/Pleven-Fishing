@@ -7,6 +7,6 @@ class ReportPostForm(forms.ModelForm):
         model = Post
         fields = ['title', 'image', 'content',]
         widgets = {
-            'title': forms.TextInput(attrs={'class': 'form-control', 'placeholder': 'Title of report...'}),
-            'content': forms.Textarea(attrs={'class': 'form-control', 'placeholder': 'Tell me your story of fishing ...'}),
+            'title': forms.TextInput(attrs={'class': 'form-control', 'placeholder': 'Tell us about...'}),
+            'content': forms.Textarea(attrs={'class': 'form-control', 'placeholder': 'Share your story of fishing ...'}),
         }

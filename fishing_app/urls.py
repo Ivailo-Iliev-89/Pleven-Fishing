@@ -8,4 +8,5 @@ urlpatterns = [
     path('type/<str:place_type>/', views.type_filter, name='type_filter'),
     path('about/', views.about, name='about'),
     path('advices/', views.advices, name='advices'),
+    # TODO Path to learn_more()
 ]
