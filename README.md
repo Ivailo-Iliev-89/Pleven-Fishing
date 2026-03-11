@@ -12,14 +12,17 @@ It bridges the gap between static location data and dynamic user needs through a
 - ***Relational Data Structure*** :  Link fishing reports (Posts) to specific locations using Django `ForeignKey`.
 - ***Geospatial Integration*** :  Embedded ***Google Maps API*** for precise location tracking.
 - ***Secure Configuration*** :  ***Implemented*** industry-standard security by decoupling settings from credentials using Environment Variables.
-- ***SEO & UX Focused*** :  Responsive design (Flexbox/Grid) with optimized typography (Google Fonts).
+- ***SEO*** :  Responsive design (Flexbox/Grid) with optimized typography (Google Fonts).
+- ***Discovery System*** :  ***Integrated*** a "Discover" module with intelligent filtering by water body, categories and fishing techniques.
+- ***Smart Search*** :  ***Implemented*** a robust search engine using ***Django Q*** objects to perform Locations and Fishing Methods.
+- ***Enhanced UX Interaction*** :  ***Developed*** a custom JavaScript dropdown navigation with smart hover-delay logic to prevent accidental menu closures.
 
 
 ## Tech Stack
 
 - ***Backend*** :  Python , Django 
 - ***Database*** :  PostgreSQL
-- ***Frontend*** :  HTML, CSS ( Flexbox and Grid ), JavaScript
+- ***Frontend*** :  HTML, CSS ( Flexbox and Grid ), JavaScript (Custom Interactive Components)
 - ***Environment Management*** :  Python-dotenv for secure credential handling.
 - ***API*** :  Google Maps JavaScript API
 
@@ -30,6 +33,9 @@ It bridges the gap between static location data and dynamic user needs through a
 - ***Querying*** :  Using a Django's `filter()` and `exclude()` methods to ***handle*** complex many-to-many relationships in a user-friendly way.
 - ***Environment Security*** :  ***Learned the importance of securing sensitive data*** (API keys, DB credentials) using `python-dotenv` to follow ***industry best practices***.
 - **Data Modeling** :  ***Understood how to design a relational schema*** that connects geographical locations with user-contributed reports and fishing methods.
+- ***Query Logic*** :  Use a Django Q objects for complex OR statements, allowing users to search across multiple database models from a single input.
+- ***UI Patterns*** :  ***Implemented*** hover logic in CSS and ***timeout-delay in JavaScript*** to create stable navigation menus.
+- ***Filtering via URL*** :  ***Learned*** how to use request.GET to filter database results dynamically, without creating multiple redundant views.
 
 
 ## Instructions to setup
@@ -51,6 +57,8 @@ It bridges the gap between static location data and dynamic user needs through a
 - ***Geospatial Navigation*** :  Click on the embedded Google Maps links to ***get precise GPS directions*** to each spot.
 - ***Filter by Method*** :  Use the ***dynamic filter buttons*** to find spots suitable for specific techniques like "Spinning" or "Feeder".
 - ***Manage Content*** :  Access the Django Admin panel to add new locations, update photos, or manage fishing reports.
+- ***Smart Search*** :  Use the ***global search bar*** to find spots by name, description, or specific fish species and methods.
+- ***Interactive Discovery*** :  Use the "Discover" dashboard to ***quickly jump into categories*** like Rivers, Lakes, or specialized techniques.
 
 
 ## Future Improvements
@@ -58,7 +66,4 @@ It bridges the gap between static location data and dynamic user needs through a
 - ***Integration***  with a ***Weather API*** for real-time fishing conditions..
 - ***Interactive***  "Catch Map" using ***Leaflet.js***..
 
-
-
-
-
+- 
