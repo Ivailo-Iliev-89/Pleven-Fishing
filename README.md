@@ -45,12 +45,12 @@ It bridges the gap between static location data and dynamic user needs through a
 - ***Database*** :  PostgreSQL
 - ***Frontend*** :  HTML, CSS ( Flexbox and Grid ), JavaScript (Custom Interactive Components)
 - ***Environment Management*** :  Python-dotenv for secure credential handling.
-- ***API*** :  Google Maps JavaScript API
+- ***API*** :  Google Maps API
 
 
 ## What I Learned
 
-- ***API Integration*** :  Gained experience in integrating and customizing third-party services like the Google Maps JavaScript API for real-world applications.
+- ***API Integration*** :  Gained experience in integrating and customizing third-party services like the Google Maps API for real-world applications.
 - ***Querying*** :  Using a Django's `filter()` and `exclude()` methods to ***handle*** complex many-to-many relationships in a user-friendly way.
 - ***Environment Security*** :  ***Learned the importance of securing sensitive data*** (API keys, DB credentials) using `python-dotenv` to follow ***industry best practices***.
 - **Data Modeling** :  ***Understood how to design a relational schema*** that connects geographical locations with user-contributed reports and fishing methods.
