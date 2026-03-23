@@ -18,6 +18,27 @@ It bridges the gap between static location data and dynamic user needs through a
 - ***Enhanced UX Interaction*** :  ***Developed*** a custom JavaScript dropdown navigation with smart hover-delay logic to prevent accidental menu closures.
 
 
+## Preview
+
+#### Interactive Landing Page (Parallax & Custom Navigation)
+![Home Page](screenshots/geoangler-home.png)
+
+#### Secure Authentication (User Onboarding & Security Hints)
+![Auth](screenshots/geoangler-register.png)
+
+#### Detailed Spot Overview (Google Maps & Related Techniques)
+![Location Detail](screenshots/geoangler-location-detail.png)
+
+#### Technique Encyclopedia (Related Locations & Data Mapping)
+![Fishing Methods Detail](screenshots/geoangler-method.png)
+
+#### Complex Filtering & Search Results
+![Search Filters](screenshots/geoangler-search.png)
+
+#### Secure Community Feedback (User Reports)
+![User Reports](screenshots/geoangler-report.png)
+
+
 ## Tech Stack
 
 - ***Backend*** :  Python , Django 
