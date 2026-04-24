@@ -37,4 +37,18 @@
     {% endfor %}
 </div>
 
+<div class="pagination-controls"> 
+    <button id="prevBtn" class="btn-more"
+        {% if not places.has_previous %}style="display: none;"
+        {% endif %}>← Previous
+    </button>
+
+    <span id="pageCounter">Page {{ places.number }}</span>
+
+    <button id="nextBtn" class="btn-more"
+        {% if not places.has_next %}style="display: none;"
+        {% endif %}>Next →
+    </button>
+</div>
+
 {% endblock %}

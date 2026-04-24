@@ -1,18 +1,43 @@
 from django.shortcuts import render, get_object_or_404, redirect
-from .models import FishingPlace, Method
-from blog.forms import ReportPostForm
 from django.contrib.auth.forms import UserCreationForm
 from django.contrib.auth import login
-import random
 from django.db.models import Q
-
+from django.core.paginator import Paginator
+from django.template.loader import render_to_string
+from django.http import JsonResponse
+from blog.forms import ReportPostForm
+from .models import FishingPlace, Method
+import random
 
 # The home page
+
+
 def index(request):
     places = FishingPlace.objects.all()
     place_type = request.GET.get('type')
+
     if place_type:
         places = places.filter(place_type__iexact=place_type)
+
+    paginator = Paginator(places, 6)  # Show 6 locations at one page
+    page_number = request.GET.get('page', 1)
+    places = paginator.get_page(page_number)
+
+    # AJAX request to insert peace of code with innerHTML
+    if request.headers.get('x-requested-with') == 'XMLHttpRequest':
+        html = render_to_string('fishing_app/index.html',
+                                {'places': places}, request=request)
+        next_page = places.has_next()
+        previous_page = places.has_previous()
+        page = places.number
+
+        return JsonResponse({
+            'html': html,
+            'next_page': next_page,
+            'previous_page': previous_page,
+            'page': page
+        })
+
     return render(request, 'fishing_app/index.html', {
         'places': places,
         'selected_type': place_type
