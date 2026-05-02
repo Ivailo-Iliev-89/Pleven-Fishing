@@ -3,10 +3,47 @@
     background-color: #1a3c34;
     display: flex;
     padding: 1rem 2rem;
-    align-items: center;
-    justify-content: space-between;
     color: white;
     box-shadow: 0 2px 10px rgba(0,0,0,0.2);
+    position: sticky;
+    flex-wrap: nowrap;
+    justify-content: space-between;
+    align-items: center;
+    z-index: 1000;
+    top: 0;
+}
+.logo {
+    display: flex;
+    z-index: 11;
+    flex: 1;
+    justify-content: center;
+    position: relative;
+    align-items: center;
+    
+}
+.logo .btn-primary {
+    display: inline-block;
+    color: #1a3c34;
+    background-color: #ffca28;
+    padding: 5px 15px;
+    border-radius: 4px;
+    font-size: 0.9rem;
+    text-decoration: none;
+    text-transform: uppercase;
+    font-weight: bold;
+    position: static;
+    transform: none;
+    white-space: nowrap;
+    left:50%;
+    z-index: 10;
+}
+.logo .logo-img {
+    color: #e9f5f2;
+    font-size: 3rem;
+    font-weight: bold;
+    text-decoration: none;
+    font-family: 'Oswald', sans-serif;
+    
 }
 .logo a {
     color: white;
@@ -16,11 +53,17 @@
     font-family: 'Oswald', sans-serif;
     letter-spacing: 1px;
     display: flex;
-    align-items: center;
     gap: 10px;
 }
-.logo a:hover { color: #ffca28;transition: 0.3s; }
-.nav-links { list-style: none; display: flex; gap: 25px; }
+.logo .logo-img:hover { color: #ffca28;}
+.logo a:hover { color:#e9f5f2;transition: 0.3s; }
+.nav-links { 
+    list-style: none;
+     display: flex; 
+     gap: 20px; 
+     justify-content: center;
+     flex:4;
+    }
 .nav-links a {
     color: white;
     text-decoration: none;
@@ -30,16 +73,34 @@
 }
 .nav-links a:hover { color: #bdc3c7; }
 
+.user-menu .user-greeting {
+    color:#ffca28;
+    font-style: italic;
+    
+}
+.logout-link {
+    background: none;
+    border: 1px solid #ffca28;
+    color: #ffca28;
+    font-family: 'Oswald', sans-serif;
+    cursor: pointer;
+    padding: 4px 10px;
+    text-transform: uppercase;
+    transition: 0.3s;
+    
+}
+.logout-link:hover {background: #ffca28;color: #1a3c34;}
+
 /*-- Dropdown menu --*/
 .dropdown {position: relative;}
 .dropdown-content {
     display: block;
     visibility: hidden;
     opacity: 0;
-    transform: translateY(10px);
+    transform: translateY(15px);
+    transition: all 0.2s ease-in-out;
     top: 100%;
     left: 0;
-    transition: all 0.4s cubic-bezier(0.165, 0.84, 0.44, 1);
     position: absolute;
     background-color: #e9f5f2;
     min-width: 200px;
@@ -47,9 +108,12 @@
     padding-top: 10px;
     border-radius: 4px;
     margin-top: -5px;
-    max-height: 300px;
+    max-height: 400px;
     overflow-y: auto;
     overflow-x: hidden;
+    -webkit-overflow-scrolling: touch;
+    z-index: 1000;
+
     
     /* For Firefox Only--> Scroll Menu */
     scrollbar-width: thin;
@@ -63,7 +127,13 @@
     text-decoration: none;
 }
 .dropdown-content a:hover {background-color:#ffca28; color: #1a3c34;}
-.dropdown-content.show {opacity: 1;visibility: visible; transform: translateY(0);}
+.dropdown-content.show {
+    opacity: 1;
+    visibility: visible; 
+    transform: translateY(-5px);
+    text-align: center;
+    
+}
 .dropdown-header {
     background-color: #f8f9fa;
     padding: 8px 16px;
@@ -77,4 +147,119 @@
     opacity: 1;
     transform: translateY(0);
     pointer-events: auto;
+}
+
+/* --- MEDIA QUERIES --- */
+@media (max-width: 768px) {
+    /* Основен контейнер */
+    .navbar {
+        display: flex;
+        flex-direction: row;
+        flex-wrap: wrap; 
+        padding: 10px;
+        justify-content: space-between;
+        align-items: center;
+    }
+
+    /* Лого - центрирано на мобилни */
+    .logo {
+        flex: 1;
+        display: flex;
+        justify-content: center;
+        width: auto;
+    }
+    .logo .logo-img {
+        color: #ffca28;
+        font-size: 2rem;
+    }
+    .logo .btn-primary { 
+        display: none; 
+    }
+
+    /* Потребителско меню (Здравей, име + изход) */
+    .user-menu {
+        flex: 0 0 100%;
+        display: flex;
+        flex-direction: row;
+        justify-content: flex-end;
+        align-items: center;
+        gap: 10px;
+        margin-top: 10px;
+        padding-top: 5px;
+    }
+    .user-greeting {
+        font-size: 0.85rem; 
+        white-space: nowrap;
+    }
+
+    /* Контейнер за търсачката */
+    .mobile-search-container {
+        display: flex;
+        justify-content: center;
+        width: 100%;
+        padding-top: 10px;
+        margin-bottom: -10px;
+    }
+    .mobile-search-container .btn-primary {
+        display: block;
+        width: 85%;
+        margin-top: 10px;
+        padding: 12px 25px;
+        font-size: 1rem;
+    }
+
+    /* Навигационни линкове - превърнати в чисти бутони */
+    .nav-links {
+        flex: 0 0 100%;
+        display: flex;
+        flex-direction: row;
+        justify-content: space-around; /* Балансирано разстояние между двата линка */
+        margin-top: 15px;
+        padding-top: 10px;
+        border-top: 1px solid rgba(255, 255, 255, 0.1);
+    }
+
+    .nav-links li {
+        margin-bottom: 0;
+        list-style: none;
+    }
+
+    /* Линковете за Локации и Методи */
+    .nav-links a {
+        font-size: 0.9rem;
+        display: block;
+        padding: 10px 5px;
+        text-decoration: none;
+        font-weight: 500;
+    }
+
+    /* Деактивиране на дропдаун функционалността */
+    .dropdown {
+        flex: 0 1 auto;
+        width: auto;
+    }
+
+    .dropdown-content {
+        display: none; /* Скриваме напълно списъците */
+    }
+
+    /* Премахваме стрелките и специфичните дропдаун символи */
+    .dropdown-toggle::after, 
+    .dropdown-toggle span { 
+        display: none; 
+    }
+
+    /* Премахваме ефектите при активност/фокус, които показват менюто */
+    .dropdown:active .dropdown-content,
+    .dropdown:focus-within .dropdown-content,
+    .dropdown-content.show {
+        display: none;
+    }
+    .main-action-area .btn-primary {
+        display: block;
+        width: 90%;
+        margin: 20px auto;
+        font-size: 1rem;
+        padding: 12px;
+    }
 }

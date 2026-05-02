@@ -14,17 +14,16 @@
     <link rel="stylesheet" href="{% static 'css/fishing_cards.css' %}">
     <link rel="stylesheet" href="{% static 'css/fishing_details.css' %}">
     <link rel="stylesheet" href="{% static 'css/blog.css' %}">
-    <link rel="stylesheet" href="{% static 'css/pagination.css' %}">
+    
 </head>
 <body>
 
-<nav class="navbar">
+<nav class="navbar ">
     <div class="logo">
-        <a href="{% url 'index' %}">
-            🎣 GeoAngler 🎣 
-        </a>
+        <a href="{% url 'index' %}" class="logo-img">GeoAngler</a>
     </div>
     
+    {% if user.is_authenticated %}
     <ul class="nav-links">
         <li class="dropdown">
             <a href="#" class="dropdown-toggle">Locations ▾</a>
@@ -54,26 +53,16 @@
                 {% endfor %}
             </div>
         </li>
-
-        <ul class="nav-links">
-            {% if user.is_authenticated %}
-            <li class="nav-user-item">
-                <span class="user-greeting">Hello,Fisher {{ user.username }}!</span>
-            </li>
-
-            <li>
-                <form action="{% url 'logout' %}" method="post" style="display: inline;">
-                    {% csrf_token %}
-                    <button type="submit" class="logout-link">Logout</button>
-                </form>
-            </li>
-
-            {% else %}
-            <li><a href="{% url 'login' %}" class="auth-btn login-btn">Login</a></li>
-            <li><a href="{% url 'signup' %}" class="auth-btn logout-btn">Sign Up</a></li>
-            {% endif %}
-        </ul>
     </ul>
+
+    <div class="user-menu">
+        <span class="user-greeting">Hello, dear Fisher {{ user.username }} !</span>
+        <form action="{% url 'logout' %}" method="post" style="display: inline;">
+            {% csrf_token %}
+            <button type="submit" class="logout-link">Logout</button>
+        </form>
+    </div>
+    {% endif %}
 </nav>
 
 <main class="container">
@@ -83,13 +72,6 @@
 
 <footer class="site-footer">
     <div class="footer-content">
-        <div class="footer-section">
-            <h4>&copy; GeoAngler</h4>
-            <p>Your guide to the best fishing spots in the Pleven region.<br/>
-                Discover new horizons for your favorite hobby.  
-            </p>
-        </div>
-        
         <div class="footer-section">
             <h4>Connections</h4>
             <ul>
@@ -102,9 +84,9 @@
         <div class="footer-section">
             <h4>Contacts</h4>
             <ul>
-                <li>Phone:</br>+359-877-093-177</li>
-                <li>Adress:</br>Pleven City, Bulgaria</li>
-                <li>Email:</br>ivailoiliev89@gmail.com</li>
+                <li>Phone: +359-877-093-177</li>
+                <li>Adress: Pleven City, Bulgaria</li>
+                <li>Email: ivailoiliev89@gmail.com</li>
             </ul>
         </div>
     </div>

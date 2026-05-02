@@ -5,19 +5,29 @@ document.addEventListener('DOMContentLoaded', function() {
         const content = dropdown.querySelector('.dropdown-content');
         let timeout;
 
+        // Функция за десктоп (mouseenter)
         dropdown.addEventListener('mouseenter', function() {
-            clearTimeout(timeout);
-            content.classList.add('show');
+            // Активираме само ако екрана е над 768px (десктоп)
+            if (window.innerWidth > 768) {
+                clearTimeout(timeout);
+                content.classList.add('show');
+            }
         });
 
+        // Функция за десктоп (mouseleave)
         dropdown.addEventListener('mouseleave', function() {
-            timeout = setTimeout(() => {
-                content.classList.remove('show');
-            }, 500); 
+            if (window.innerWidth > 768) {
+                timeout = setTimeout(() => {
+                    content.classList.remove('show');
+                }, 500); 
+            }
         });
+
+        // ПРЕМАХВАМЕ всякакви click събития, които пречат на линка
+        // Сега на мобилен, когато цъкнеш на "Locations", 
+        // браузърът просто ще те отведе на адреса в href=""
     });
 });
-
 let currentPage = 1;
 async function handlePagination(page) {
     const urlParams = new URLSearchParams(window.location.search);

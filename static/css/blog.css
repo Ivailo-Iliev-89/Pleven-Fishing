@@ -63,11 +63,20 @@
 
 /*-- Reports Grid and Cards in Place Detail --*/
 .user-reports-container {margin-top: 40px;padding: 20px;}
+.user-reports-container h3 { 
+    background-color: #1a3c34;
+    border-radius: 15px;
+    text-transform: none;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    color:#ddd;
+}
 .section-title {
     text-align: center;
     color: #1a3c34;
     margin-bottom: 30px;
     font-size: 2em;
+    text-transform: uppercase;
+    font-family: 'Oswald', sans-serif;
 }
 .reports-grid {
     display: grid; 
@@ -78,8 +87,10 @@
 .reports-empty {
     text-align: center; 
     grid-column: 1 / -1; 
-    color: #888; 
+    color: #1a3c34;
     font-style: italic;
+    background-color: #ddd;
+    border-radius: 10px;
 }
 .report-card {
     border: 1px solid #ddd; 
@@ -150,3 +161,18 @@
     outline: none;
 }
 .fishing-form input[type="file"] {padding: 10px 0;color: #666;}
+
+/* --- MEDIA QUERIES --- */
+@media (max-width: 768px) {
+    .post-detail-container,
+    .post-full-view,
+    .add-report-form {margin: 20px 10px;padding: 20px;width: auto;}
+    .post-content,
+    .post-full-content {font-size: 1rem;text-align: left;}
+    .reports-grid {display: flex;flex-direction: column;gap: 20px;}
+    .report-card {width: 100%;margin: 0;}
+    .report-card img {height: 200px;}
+    .fishing-form .form-row {flex-direction: column;}
+    .btn-submit-report {width: 100%;}
+    .section-title {font-size: 1.6em;}
+}

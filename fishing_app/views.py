@@ -7,19 +7,25 @@ from django.template.loader import render_to_string
 from django.http import JsonResponse
 from blog.forms import ReportPostForm
 from .models import FishingPlace, Method
+from .utils import get_weather_data
 import random
 
+
+# TODO
+# разделя локациите от метода (за лаптоп едното в ляво другото в дянсо ( в средата ще видим ),
+# и ховър жълто на текста
+# И направата на изцяло нови хтмл-и за локации и реките, може би..(ако не още малко и да го пусна)
+# Но да направя и секция за коментари във постовете и реплайове(от блог поста ми)
+
 # The home page
-
-
 def index(request):
-    places = FishingPlace.objects.all()
+    places = FishingPlace.objects.all().order_by('name')
     place_type = request.GET.get('type')
 
     if place_type:
         places = places.filter(place_type__iexact=place_type)
 
-    paginator = Paginator(places, 6)  # Show 6 locations at one page
+    paginator = Paginator(places, 3)  # Show 3 locations at one page
     page_number = request.GET.get('page', 1)
     places = paginator.get_page(page_number)
 
@@ -47,9 +53,13 @@ def index(request):
 # Detail for current location( for example - Vit River)
 def place_detail(request, slug):
     place = get_object_or_404(FishingPlace, slug=slug)
+    # Show Weather from API
+    weather = None
+    if place.latitude and place.longitude:
+        weather = get_weather_data(place.latitude, place.longitude)
 
     # Show ReportPostForm from database to user
-    posts = place.posts.filter(status='1').order_by('created_on')
+    posts = place.posts.filter(status='1').order_by('-created_on')
     if request.method == 'POST':
         form = ReportPostForm(request.POST, request.FILES)
         if form.is_valid():
@@ -65,7 +75,8 @@ def place_detail(request, slug):
     return render(request, 'fishing_app/place_detail.html', {
         'place': place,
         'posts': posts,
-        'form': form
+        'form': form,
+        'weather': weather
     })
 
 

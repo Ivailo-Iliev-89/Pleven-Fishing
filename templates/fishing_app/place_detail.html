@@ -11,9 +11,26 @@
 
     <hr class="map-divider"/>
 
-    <div class="place-description-text">
-        <h3>Additional information</h3>
-        <p>{{ place.description|linebreaks }}</p>
+    <div class="info-sidebar-top" style="display: flex; gap: 20px; flex-wrap: wrap; margin-bottom: 20px;">
+        <div class="info-box" style="flex: 1; min-width: 250px;">
+            <h4>⚓ Appropriate methods:</h4>
+            <div class="fish-list">
+                {% for method in place.methods.all %}
+                    <span class="fish-item">
+                        <a href="{% url 'method_detail' method.slug %}" style="text-decoration: none; color: inherit;">{{ method.name }}</a>
+                    </span>
+                {% endfor %}
+            </div>
+        </div>
+
+        <div class="info-box" style="flex: 1; min-width: 250px;">
+            <h4>🐟 Types of fish here:</h4>
+            <div class="fish-list">
+                {% for fish in place.fishes.all %}
+                    <span class="fish-item">{{ fish.name }}</span>
+                {% endfor %}
+            </div>
+        </div>
     </div>
 
     <div class="detail-content">
@@ -24,26 +41,42 @@
         </div>
 
         <div class="info-sidebar">
-            <div class="info-box">
-                <h4>⚓ Appropriate methods:</h4>
-                <ul class="nav-links">
-                    {% for method in place.methods.all %}
-                        <li>
-                            <a href="{% url 'method_detail' method.slug %}">{{ method.name }}</a>
-                        </li>
-                    {% endfor %}
-                </ul>
-            </div>
-
-            <div class="info-box">
-                <h4>🐟 Types of fish here:</h4>
-                <div class="fish-list">
-                    {% for fish in place.fishes.all %}
-                        <span class="fish-item">{{ fish.name }}</span>
-                    {% endfor %}
+            {% if weather %}
+            <div class="info-box weather-box-new">
+                <h4>🌤️ Current Weather:</h4>
+                <div class="weather-main-info">
+                    <img src="https://openweathermap.org/img/wn/{{ weather.icon }}@2x.png" alt="weather-icon">
+                    <span class="weather-degree">{{ weather.temp }}°C</span>
+                </div>
+            
+                <div class="weather-extra-details">
+                    <p><strong>Wind:</strong> {{ weather.wind_speed }} m/s</p>
+                    <p><strong>Pressure:</strong> {{ weather.pressure }} hPa</p>
+                    <p class="weather-status">{{ weather.description|capfirst }}</p>
                 </div>
             </div>
+            {% else %}
+            <div class="info-box weather-box-new" style="opacity: 0.8;">
+                <h4>🌤️ Weather Info</h4>
+                <div style="text-align: center; padding: 20px 10px;">
+                    <span style="font-size: 40px;">📍</span>
+                    <p style="margin-top: 10px; font-style: italic; color: #666;">
+                        Weather data is not available for this location yet. 
+                    </p>
+                    {% if user.is_staff %}
+                        <small style="color: #1a3c34;">(Admin: Please add coordinates in the admin panel)</small>
+                    {% endif %}
+                </div>
+            </div>
+            {% endif %}
         </div>
+    </div>
+
+    <hr class="map-divider"/>
+
+    <div class="place-description-text">
+        <h3>Additional information</h3>
+        <p>{{ place.description|linebreaks }}</p>
     </div>
 
     {% if place.map_embed %}
@@ -95,12 +128,12 @@
         <h4>Share your fishing trip ?</h4>
         <p>Only registered fishermans can published a report story.</p>
             <a href="{% url 'login' %}" class="btn-more-report">
-                Log in here</a> or <a href="#">is register.</a>
+                Log in here</a> or <a href="{% url 'signup' %}">is register.</a>
     </div>
     {% endif %}
 
     <div class="reports-grid">
-        {% for post in place.posts.all %} 
+        {% for post in posts %} 
             <div class="report-card">
                 {% if post.image %}
                     <img src="{{ post.image.url }}" alt="{{ post.title }}">

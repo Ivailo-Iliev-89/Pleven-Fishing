@@ -52,6 +52,10 @@ class FishingPlace(models.Model):
         null=True,
         verbose_name='Google Maps Embed Code',
     )
+    latitude = models.DecimalField(
+        max_digits=9, decimal_places=6, null=True, blank=True, help_text='Latitude')
+    longitude = models.DecimalField(
+        max_digits=9, decimal_places=6, null=True, blank=True, help_text='Longitude')
 
     def save(self, *args, **kwargs):
         if not self.slug:

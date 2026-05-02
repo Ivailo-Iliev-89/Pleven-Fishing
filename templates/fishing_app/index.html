@@ -2,53 +2,70 @@
 {% block content %}
 {% load static %}
 
-<section class="hero-section">
-    <div class="hero-overlay">
-        <h1>Fishing Paradise at Pleven</h1>
-        <p>Discover the best fishing spots, the right techniquies,
-            tips for succesful fishing in the heart of Moesia
+{% if user.is_authenticated %}
+    <div class="mobile-search-container">
+        <a href="{% url 'discover' %}" class="btn-primary">
+            Find Fishing Adventures ...
+        </a>
+    </div>
+
+    <div id="places-anchor" class="places-grid">
+        {% for place in places %}
+            <div class="place-card">
+                <div class="place-image">
+                    {% if place.image %}
+                        <img src="{{ place.image.url }}" alt="{{ place.name }}">
+                    {% endif %}
+                    <span class="badge">{{ place.get_place_type_display }}</span>
+                </div>
+                <div class="place-info">
+                    <h3>{{ place.name }}</h3>
+                    <p>{{ place.description|truncatechars:100 }}</p>
+                    <div class="tags">
+                        {% for fish in place.fishes.all|slice:":3" %}
+                            <span class="fish-tag">🐟 {{ fish.name }}</span>
+                        {% endfor %}
+                    </div>
+                    <a href="{% url 'place_detail' place.slug %}" class="btn-more">More details</a>
+                </div>
+            </div>
+        {% endfor %}
+    </div>
+
+    <div class="pagination-controls"> 
+        <button id="prevBtn" class="btn-more" {% if not places.has_previous %}style="display: none;"{% endif %}>← Previous</button>
+        <span id="pageCounter">Page {{ places.number }}</span>
+        <button id="nextBtn" class="btn-more" {% if not places.has_next %}style="display: none;"{% endif %}>Next →</button>
+    </div>
+
+{% else %}
+    <div class="welcome-box">
+        <h1>Join the GeoAngler Community</h1>
+        <p class="welcome-lead">
+            Your ultimate guide to the best fishing spots in the Pleven region.<br/>
+            Discover new horizons for your favorite hobby.
         </p>
-        <div class="hero-buttons">
-            <a href="{% url 'discover' %}" class="btn-primary">Learn More</a>
+        
+        <div class="info-grid">
+            <div class="info-item">
+                <h3>Spots</h3>
+                <p>Rivers, lakes, and hidden swamps.</p>
+            </div>
+            <div class="info-item">
+                <h3>Tips</h3>
+                <p>Professional techniques and methods.</p>
+            </div>
+            <div class="info-item">
+                <h3>Social</h3>
+                <p>Share photos and your best catch.</p>
+            </div>
+        </div>
+
+        <div class="auth-actions">
+            <a href="{% url 'login' %}" class="btn-primary">LOGIN</a>
+            <a href="{% url 'signup' %}" class="btn-more">SIGN UP</a>
         </div>
     </div>
-</section>
-
-<div id="places-anchor" class="places-grid">
-    {% for place in places %}
-        <div class="place-card">
-            <div class="place-image">
-                {% if place.image %}
-                    <img src="{{ place.image.url }}" alt="{{ place.name }}">
-                {% endif %}
-                <span class="badge">{{ place.get_place_type_display }}</span>
-            </div>
-            <div class="place-info">
-                <h3>{{ place.name }}</h3>
-                <p>{{ place.description|truncatechars:100 }}</p>
-                <div class="tags">
-                    {% for fish in place.fishes.all|slice:":3" %}
-                        <span class="fish-tag">🐟 {{ fish.name }}</span>
-                    {% endfor %}
-                </div>
-                <a href="{% url 'place_detail' place.slug %}" class="btn-more">More details</a>
-            </div>
-        </div>
-    {% endfor %}
-</div>
-
-<div class="pagination-controls"> 
-    <button id="prevBtn" class="btn-more"
-        {% if not places.has_previous %}style="display: none;"
-        {% endif %}>← Previous
-    </button>
-
-    <span id="pageCounter">Page {{ places.number }}</span>
-
-    <button id="nextBtn" class="btn-more"
-        {% if not places.has_next %}style="display: none;"
-        {% endif %}>Next →
-    </button>
-</div>
+{% endif %}
 
 {% endblock %}
