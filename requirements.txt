@@ -21,5 +21,9 @@ slugify==0.0.1
 sqlparse==0.5.5
 typing_extensions==4.15.0
 tzdata==2025.3
+<<<<<<< HEAD
 uritemplate==4.2.0
 urllib3==2.6.3
+=======
+uritemplate==4.2.0
+>>>>>>> d2a01a627aaea45e1221501c9c4e64711a0b0e23
