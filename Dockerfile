@@ -18,6 +18,6 @@ RUN pip install --no-cache-dir -r requirements.txt
 
 COPY . .
 
-RUN chown -r django-user:django-user /app
+RUN chown -R django-user:django-user /app
 
 USER django-user
