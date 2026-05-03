@@ -5,9 +5,7 @@ document.addEventListener('DOMContentLoaded', function() {
         const content = dropdown.querySelector('.dropdown-content');
         let timeout;
 
-        // Функция за десктоп (mouseenter)
         dropdown.addEventListener('mouseenter', function() {
-            // Активираме само ако екрана е над 768px (десктоп)
             if (window.innerWidth > 768) {
                 clearTimeout(timeout);
                 content.classList.add('show');
@@ -22,12 +20,9 @@ document.addEventListener('DOMContentLoaded', function() {
                 }, 500); 
             }
         });
-
-        // ПРЕМАХВАМЕ всякакви click събития, които пречат на линка
-        // Сега на мобилен, когато цъкнеш на "Locations", 
-        // браузърът просто ще те отведе на адреса в href=""
     });
 });
+
 let currentPage = 1;
 async function handlePagination(page) {
     const urlParams = new URLSearchParams(window.location.search);
