@@ -151,7 +151,6 @@
 
 /* --- MEDIA QUERIES --- */
 @media (max-width: 768px) {
-    /* Основен контейнер */
     .navbar {
         display: flex;
         flex-direction: row;
@@ -160,23 +159,14 @@
         justify-content: space-between;
         align-items: center;
     }
-
-    /* Лого - центрирано на мобилни */
     .logo {
         flex: 1;
         display: flex;
         justify-content: center;
         width: auto;
     }
-    .logo .logo-img {
-        color: #ffca28;
-        font-size: 2rem;
-    }
-    .logo .btn-primary { 
-        display: none; 
-    }
-
-    /* Потребителско меню (Здравей, име + изход) */
+    .logo .logo-img {color: #ffca28;font-size: 2rem;}
+    .logo .btn-primary { display: none; }
     .user-menu {
         flex: 0 0 100%;
         display: flex;
@@ -187,12 +177,7 @@
         margin-top: 10px;
         padding-top: 5px;
     }
-    .user-greeting {
-        font-size: 0.85rem; 
-        white-space: nowrap;
-    }
-
-    /* Контейнер за търсачката */
+    .user-greeting {font-size: 0.85rem;  white-space: nowrap;}
     .mobile-search-container {
         display: flex;
         justify-content: center;
@@ -207,24 +192,16 @@
         padding: 12px 25px;
         font-size: 1rem;
     }
-
-    /* Навигационни линкове - превърнати в чисти бутони */
     .nav-links {
         flex: 0 0 100%;
         display: flex;
         flex-direction: row;
-        justify-content: space-around; /* Балансирано разстояние между двата линка */
+        justify-content: space-around;
         margin-top: 15px;
         padding-top: 10px;
         border-top: 1px solid rgba(255, 255, 255, 0.1);
     }
-
-    .nav-links li {
-        margin-bottom: 0;
-        list-style: none;
-    }
-
-    /* Линковете за Локации и Методи */
+    .nav-links li {margin-bottom: 0; list-style: none;}
     .nav-links a {
         font-size: 0.9rem;
         display: block;
@@ -232,29 +209,13 @@
         text-decoration: none;
         font-weight: 500;
     }
-
-    /* Деактивиране на дропдаун функционалността */
-    .dropdown {
-        flex: 0 1 auto;
-        width: auto;
-    }
-
-    .dropdown-content {
-        display: none; /* Скриваме напълно списъците */
-    }
-
-    /* Премахваме стрелките и специфичните дропдаун символи */
+    .dropdown {flex: 0 1 auto;width: auto;}
+    .dropdown-content {display: none;}
     .dropdown-toggle::after, 
-    .dropdown-toggle span { 
-        display: none; 
-    }
-
-    /* Премахваме ефектите при активност/фокус, които показват менюто */
+    .dropdown-toggle span { display: none; }
     .dropdown:active .dropdown-content,
     .dropdown:focus-within .dropdown-content,
-    .dropdown-content.show {
-        display: none;
-    }
+    .dropdown-content.show {display: none;}
     .main-action-area .btn-primary {
         display: block;
         width: 90%;

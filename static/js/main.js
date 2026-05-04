@@ -11,8 +11,7 @@ document.addEventListener('DOMContentLoaded', function() {
                 content.classList.add('show');
             }
         });
-
-        // Функция за десктоп (mouseleave)
+        
         dropdown.addEventListener('mouseleave', function() {
             if (window.innerWidth > 768) {
                 timeout = setTimeout(() => {
