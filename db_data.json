@@ -1,0 +1,1657 @@
+[
+{
+  "model": "auth.user",
+  "fields": {
+    "password": "pbkdf2_sha256$600000$MiotPhU1e9sctmHptfMT7A$yJrVTegebGZGLe2OFnre4F9cWO89YYFGuOq2DntFy94=",
+    "last_login": "2026-04-29T15:16:16.815Z",
+    "is_superuser": true,
+    "username": "ivchu",
+    "first_name": "",
+    "last_name": "",
+    "email": "",
+    "is_staff": true,
+    "is_active": true,
+    "date_joined": "2026-02-03T11:10:51.240Z",
+    "groups": [],
+    "user_permissions": []
+  }
+},
+{
+  "model": "sessions.session",
+  "pk": "9j2ax2l8co5i700piz4iszxmtiixynp7",
+  "fields": {
+    "session_data": ".eJxVjDkOwjAURO_iGlkJXmJT0ucM1t_AAWRLWSrE3XGkFFCNNO_NvFWCbc1pW2ROE6uL6tXpt0Ogp5Qd8APKvWqqZZ0n1LuiD7rosbK8rof7d5BhyW3tPJgwMJMzgQUFLNlgqcM4xN4Gj-TYgrSIjXYo3hvmcOsc0tmwqM8XBQA5Kg:1vnEJa:EakcwAqKoRfBJmMl8m9jLHVCRZZMeemzDtAJhJiYg-0",
+    "expire_date": "2026-02-17T11:11:26.899Z"
+  }
+},
+{
+  "model": "sessions.session",
+  "pk": "wi00jye1ysuf5a4x7yiatf9kdtiojkb1",
+  "fields": {
+    "session_data": ".eJxVjDsOwjAQBe_iGllar7N2KOk5g7X-4QCypTipEHeHSCmS9s3M-wjH61Lc2tPspiiuAsTluHkOr1Q3EJ9cH02GVpd58nJT5E67vLeY3rfdPR0U7uVfJ9JE2nggzQkgD16RyUCIwZI1mX00YNU4ZgzESlkeGJEVRGORM4nvD8hdN0s:1wGaFK:-wxYkyzUYL-0o1wZomWkO7hiUo4MogQVX2fGmdDGaIw",
+    "expire_date": "2026-05-09T10:28:22.924Z"
+  }
+},
+{
+  "model": "sessions.session",
+  "pk": "xzxxxa6rixc0yep3viu2dybhwhog2who",
+  "fields": {
+    "session_data": ".eJxVjDsOwjAQBe_iGllar7N2KOk5g7X-4QCypTipEHeHSCmS9s3M-wjH61Lc2tPspiiuAsTluHkOr1Q3EJ9cH02GVpd58nJT5E67vLeY3rfdPR0U7uVfJ9JE2nggzQkgD16RyUCIwZI1mX00YNU4ZgzESlkeGJEVRGORM4nvD8hdN0s:1wI6e8:dsJr-r5-cV1ZD9XBgvVz59eZ7QlRJ8kknJRGi93c3KA",
+    "expire_date": "2026-05-13T15:16:16.818Z"
+  }
+},
+{
+  "model": "fishing_app.method",
+  "pk": 1,
+  "fields": {
+    "name": "Feeder Fishing",
+    "slug": "feeder-fishing",
+    "description": "Feeder fishing is not just about lazily casting a feeder and waiting for something to happen, as most anglers think. Feeder fishing is a very successful method that catches a lot of fish and also allows you to fish in areas inaccessible to other methods.\r\nAccuracy is the most important thing you need to achieve when fishing with a feeder. You need to be accurate at all times and cast the feeder in a small radius even at a long distance.",
+    "image": ""
+  }
+},
+{
+  "model": "fishing_app.method",
+  "pk": 2,
+  "fields": {
+    "name": "Bolognese Fishing",
+    "slug": "bolognese-fishing",
+    "description": "Bolognese fishing is a popular fishing method, especially for catching carp, bream, crucian carp and other freshwater fish, and is mainly practiced on rivers. Its name comes from the Italian city of Bologna, where it was first developed. \r\nThis fishing method involves the use of a long, flexible fishing line, called a bolognese, which is equipped with a reel, a float and a hook or set of hooks. The line is usually between 4 and 8 meters long and is designed to evenly distribute the weight of the fish…",
+    "image": ""
+  }
+},
+{
+  "model": "fishing_app.method",
+  "pk": 3,
+  "fields": {
+    "name": "Spining Fishing",
+    "slug": "spining-fishing",
+    "description": "This is a sport fishing technique that uses a special technique where anglers cast their lure and begin to reel it in. As they reel in, the lures move through the water, mimicking the movement of a wounded fish.",
+    "image": ""
+  }
+},
+{
+  "model": "fishing_app.method",
+  "pk": 4,
+  "fields": {
+    "name": "Method Feeder",
+    "slug": "method-feeder",
+    "description": "Using the feeder method can be a very active way of catching carp on any lake, large or small, no matter what the carp stock is. For many anglers this seems to be dismissed as too much work, but I am a big fan, especially during the daytime sessions in early spring, as it is essential to cast frequently to encourage bites. However, this is not just a pre-season tactic and can account for carp all year round. Quite often I have…",
+    "image": ""
+  }
+},
+{
+  "model": "fishing_app.method",
+  "pk": 5,
+  "fields": {
+    "name": "Float Fishing",
+    "slug": "float-fishing",
+    "description": "Float Fishing is the BEST for river Osum,Vit and Iskar !",
+    "image": "methods/float-fishing.jpg"
+  }
+},
+{
+  "model": "fishing_app.fish",
+  "pk": 1,
+  "fields": {
+    "name": "Pike"
+  }
+},
+{
+  "model": "fishing_app.fish",
+  "pk": 2,
+  "fields": {
+    "name": "Moronage"
+  }
+},
+{
+  "model": "fishing_app.fish",
+  "pk": 3,
+  "fields": {
+    "name": "Barbel"
+  }
+},
+{
+  "model": "fishing_app.fish",
+  "pk": 4,
+  "fields": {
+    "name": "Carp"
+  }
+},
+{
+  "model": "fishing_app.fish",
+  "pk": 5,
+  "fields": {
+    "name": "Cupid"
+  }
+},
+{
+  "model": "fishing_app.fish",
+  "pk": 6,
+  "fields": {
+    "name": "Cockroach"
+  }
+},
+{
+  "model": "fishing_app.fish",
+  "pk": 7,
+  "fields": {
+    "name": "Perch"
+  }
+},
+{
+  "model": "fishing_app.fish",
+  "pk": 8,
+  "fields": {
+    "name": "Rasper"
+  }
+},
+{
+  "model": "fishing_app.fish",
+  "pk": 9,
+  "fields": {
+    "name": "Stapler"
+  }
+},
+{
+  "model": "fishing_app.fish",
+  "pk": 10,
+  "fields": {
+    "name": "Catfish"
+  }
+},
+{
+  "model": "fishing_app.fish",
+  "pk": 11,
+  "fields": {
+    "name": "Bream"
+  }
+},
+{
+  "model": "fishing_app.fishingplace",
+  "pk": 2,
+  "fields": {
+    "name": "Garden Lake",
+    "slug": "garden-lake",
+    "place_type": "lake",
+    "region": "Pleven",
+    "description": "Great place for fishing. There is a wide variety of fish, especially carp. Nice and quiet place, made with many amenities for fishermen and their families. You never feel left out.\r\nA very stocked dam, in which carp predominate, and in very decent sizes. In addition, grass carp and bream can be caught in the dam, and very rarely does anyone get caught.",
+    "image": "places/gradina_UVCIW90.jpg",
+    "map_embed": "<iframe src=\"https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2625.4788375929797!2d24.46585610299797!3d43.375081995472456!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x40ab8f091c6b34fb%3A0x846f8112eed14cf0!2z0Y_Qt9C-0LLQuNGAINCT0YDQsNC00LjQvdCw!5e0!3m2!1sbg!2sbg!4v1770189974806!5m2!1sbg!2sbg\" width=\"600\" height=\"450\" style=\"border:0;\" allowfullscreen=\"\" loading=\"lazy\" referrerpolicy=\"no-referrer-when-downgrade\"></iframe>",
+    "latitude": "43.376140",
+    "longitude": "24.468010",
+    "methods": [
+      1,
+      4
+    ],
+    "fishes": [
+      4,
+      5,
+      6
+    ]
+  }
+},
+{
+  "model": "fishing_app.fishingplace",
+  "pk": 3,
+  "fields": {
+    "name": "Gorni Dabnik",
+    "slug": "gorni-dabnik",
+    "place_type": "lake",
+    "region": "Dabnik",
+    "description": "The dam offers excellent opportunities for fishing and water sports.It's one of the largest dams in Northern Bulgaria. When fishing on this reservoir, you can expect to catch crucian carp, perch, bream, carp, tench, whitefish and rudd.",
+    "image": "places/dabnik.jpg",
+    "map_embed": "<iframe src=\"https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d23206.32089744866!2d24.290551990376557!3d43.3605007456434!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x40ab9a8c87f52d95%3A0xeccb9d4319cab0d0!2z0Y_Qty4g0JPQvtGA0L3QuCDQlNGK0LHQvdC40Lo!5e0!3m2!1sbg!2sbg!4v1770190434645!5m2!1sbg!2sbg\" width=\"600\" height=\"450\" style=\"border:0;\" allowfullscreen=\"\" loading=\"lazy\" referrerpolicy=\"no-referrer-when-downgrade\"></iframe>",
+    "latitude": null,
+    "longitude": null,
+    "methods": [
+      1,
+      2,
+      3,
+      4
+    ],
+    "fishes": [
+      1,
+      4,
+      5,
+      6,
+      7
+    ]
+  }
+},
+{
+  "model": "fishing_app.fishingplace",
+  "pk": 4,
+  "fields": {
+    "name": "Vit River",
+    "slug": "disevica-village",
+    "place_type": "river",
+    "region": "Pleven",
+    "description": "Not a very deep river, but on the other hand it holds fish all year round. The most commonly caught fish are bream, bream, bream and crucian carp. The river is very close to the city of Pleven, which makes it quick to reach and easily accessible to many fishermen.",
+    "image": "places/vit-disevica.jpg",
+    "map_embed": "<iframe src=\"https://www.google.com/maps/embed?pb=!4v1770189162443!6m8!1m7!1s1dTgk9T6pvRgriRwwuDdgA!2m2!1d43.30708175299482!2d24.36080914003495!3f306.31213000708726!4f-9.262900485249105!5f0.7820865974627469\" width=\"600\" height=\"450\" style=\"border:0;\" allowfullscreen=\"\" loading=\"lazy\" referrerpolicy=\"no-referrer-when-downgrade\"></iframe>",
+    "latitude": null,
+    "longitude": null,
+    "methods": [
+      2,
+      3
+    ],
+    "fishes": [
+      1,
+      2,
+      6,
+      7,
+      8,
+      9,
+      11,
+      3
+    ]
+  }
+},
+{
+  "model": "fishing_app.fishingplace",
+  "pk": 5,
+  "fields": {
+    "name": "Pisarovo Swamps",
+    "slug": "pisarovo-swamps",
+    "place_type": "swamp",
+    "region": "Kneja",
+    "description": "The marshes of the village of Pisarovo are great for fishing for pike and perch, you can also catch some small catfish, but very rarely.. Quite large bream of the 400-500 gram variety also prevail. It is mainly caught with spinning or sometimes with a rod with a plug. It is close to the Iskar River (which is where the marshes came from) and if you have no success in the marsh, you can safely go to Iskar and spin with a spinning rod.",
+    "image": "places/pisarovo.jpg",
+    "map_embed": "<iframe src=\"https://www.google.com/maps/embed?pb=!1m17!1m12!1m3!1d2898.3122790931307!2d24.227820449653716!3d43.41230179374056!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m2!1m1!2zNDPCsDI0JzQ0LjMiTiAyNMKwMTMnNTcuNyJF!5e0!3m2!1sbg!2sbg!4v1770190888778!5m2!1sbg!2sbg\" width=\"600\" height=\"450\" style=\"border:0;\" allowfullscreen=\"\" loading=\"lazy\" referrerpolicy=\"no-referrer-when-downgrade\"></iframe>",
+    "latitude": null,
+    "longitude": null,
+    "methods": [
+      3
+    ],
+    "fishes": [
+      1,
+      6,
+      7,
+      10
+    ]
+  }
+},
+{
+  "model": "fishing_app.fishingplace",
+  "pk": 6,
+  "fields": {
+    "name": "Iskar River",
+    "slug": "gigen-village",
+    "place_type": "river",
+    "region": "Gigen",
+    "description": "Fishing on the Iskar River, near the village of Gigen, is one of the most visited places all year round. The area holds a lot of fish, because it is quite close to the place where it flows into the Danube River. The most commonly caught fish are bream, bream and barbel, but some nice catfish or a pike are also possible. You can also fish with a Bolognese, as well as with a feeder. Especially in the summer it is very difficult to even find a place for a person, because of the large influx of fishermen from the entire region and even from further afield.",
+    "image": "places/gigen.jpg",
+    "map_embed": "<iframe src=\"https://www.google.com/maps/embed?pb=!4v1770189770092!6m8!1m7!1ssztvS-x9uI8Uq-uKHvZAyQ!2m2!1d43.70247163143922!2d24.45559265186229!3f356.735496475438!4f-22.606949829951347!5f0.7820865974627469\" width=\"600\" height=\"450\" style=\"border:0;\" allowfullscreen=\"\" loading=\"lazy\" referrerpolicy=\"no-referrer-when-downgrade\"></iframe>",
+    "latitude": null,
+    "longitude": null,
+    "methods": [
+      1,
+      2,
+      3
+    ],
+    "fishes": [
+      1,
+      2,
+      3,
+      8,
+      9,
+      10,
+      11,
+      6
+    ]
+  }
+},
+{
+  "model": "fishing_app.fishingplace",
+  "pk": 7,
+  "fields": {
+    "name": "Yasen Swamps",
+    "slug": "yasen-village",
+    "place_type": "swamp",
+    "region": "Pleven",
+    "description": "There are plenty of swamps in the area, but unfortunately almost nothing is caught there anymore because of poachers. However, in many secret and hidden swamps there is a possibility of catching quite nice cockroach with a size of 300g and up, as well as pike. With patience and desire, you may be surprised by how a trained fisherman can become a great.",
+    "image": "places/qsen.jfif",
+    "map_embed": "<iframe src=\"https://www.google.com/maps/embed?pb=!4v1770189659552!6m8!1m7!1s2XnDgOkPxwx67fxbnBVgsQ!2m2!1d43.39994267257445!2d24.50711232081328!3f0.04875525003143366!4f-18.676856880711497!5f0.7820865974627469\" width=\"600\" height=\"450\" style=\"border:0;\" allowfullscreen=\"\" loading=\"lazy\" referrerpolicy=\"no-referrer-when-downgrade\"></iframe>",
+    "latitude": null,
+    "longitude": null,
+    "methods": [
+      2,
+      3
+    ],
+    "fishes": [
+      1,
+      6
+    ]
+  }
+},
+{
+  "model": "fishing_app.fishingplace",
+  "pk": 8,
+  "fields": {
+    "name": "Danube River",
+    "slug": "danube-river",
+    "place_type": "river",
+    "region": "Nikopol",
+    "description": "In recent years, bottom fishing and feeder fishing has been practiced on the Danube, which is unusual for the river and typical for closed reservoirs. It consists of prolonged, constant and patient feeding of the chosen spot.\r\nÀ huge variety of fish and can be caught in any caliber from very small to very large fish. This is the \"mother of fishing\" in all of Bulgaria.",
+    "image": "places/nikopol.jpg",
+    "map_embed": "<iframe src=\"https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d1757.6322286848322!2d24.89812581802024!3d43.707713859445384!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x40ac15ce28ffdac3%3A0x1fe845a4a514cce7!2z0J_Qu9Cw0LYg0J3QuNC60L7Qv9C-0Ls!5e0!3m2!1sbg!2sbg!4v1770190711650!5m2!1sbg!2sbg\" width=\"600\" height=\"450\" style=\"border:0;\" allowfullscreen=\"\" loading=\"lazy\" referrerpolicy=\"no-referrer-when-downgrade\"></iframe>",
+    "latitude": null,
+    "longitude": null,
+    "methods": [
+      1,
+      2,
+      3
+    ],
+    "fishes": [
+      1,
+      2,
+      3,
+      4,
+      5,
+      6,
+      7,
+      8,
+      9,
+      10,
+      11
+    ]
+  }
+},
+{
+  "model": "fishing_app.fishingplace",
+  "pk": 9,
+  "fields": {
+    "name": "Osam River",
+    "slug": "osam-river",
+    "place_type": "river",
+    "region": "Letnica",
+    "description": "The slow waters of the deep pools are home to huge catfish and carp, about which legends are told, and for all beginners in fishing, the river offers an abundance of smallmouth bass, silver bream and colorful bream.The fish wealth is also complemented by migratory fish species, typical of the Danube and during high water, as it is currently, they also enter the Osam River. This is the case with the white barbel, blue bream, smadoka, pike and many others.",
+    "image": "places/osam-river.jpg",
+    "map_embed": "<iframe src=\"https://www.google.com/maps/embed?pb=!4v1770213146150!6m8!1m7!1sIw_7BSpZ2iyBXpUixQu2UQ!2m2!1d43.29953789762114!2d25.06025917658054!3f228.7772934527618!4f-12.10520914575963!5f0.7820865974627469\" width=\"600\" height=\"450\" style=\"border:0;\" allowfullscreen=\"\" loading=\"lazy\" referrerpolicy=\"no-referrer-when-downgrade\"></iframe>",
+    "latitude": null,
+    "longitude": null,
+    "methods": [
+      1,
+      2,
+      3
+    ],
+    "fishes": [
+      1,
+      2,
+      3,
+      4,
+      6,
+      8,
+      9,
+      11
+    ]
+  }
+},
+{
+  "model": "fishing_app.fishingplace",
+  "pk": 10,
+  "fields": {
+    "name": "Totlebenov Val dam",
+    "slug": "totlebenov-val-dam",
+    "place_type": "lake",
+    "region": "Pleven",
+    "description": "Totlebenov Val Dam is located in Kaylaka, near Pleven. Its name comes from the Russian military engineer of the same name, as the place was key to the Turkish blockade of Pleven in 1877. Totleben blocked the Tuchenishka River and then blew up the barrier, thus destroying the city's stored food supplies. The dam is a suitable place for recreation, water tourism, fishing and water motor sports.It's a very different fish to catch out there - the most popular is a cockroach,carp or bream.Bul sometimes a small catfish or pike it is not excluded.",
+    "image": "places/totlebenov-val-dam.png",
+    "map_embed": "<iframe src=\"https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d28346.188630528424!2d24.59765966944058!3d43.358119477625614!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x40abf24f1249eedd%3A0x67fec0d8446d0b6c!2z0Y_Qty4g0KLQvtGC0LvQtdCx0LXQvdC-0LIg0LLQsNC7!5e0!3m2!1sbg!2sbg!4v1770213535727!5m2!1sbg!2sbg\" width=\"600\" height=\"450\" style=\"border:0;\" allowfullscreen=\"\" loading=\"lazy\" referrerpolicy=\"no-referrer-when-downgrade\"></iframe>",
+    "latitude": null,
+    "longitude": null,
+    "methods": [
+      1,
+      2,
+      3
+    ],
+    "fishes": [
+      1,
+      4,
+      5,
+      6,
+      7,
+      10,
+      11
+    ]
+  }
+},
+{
+  "model": "fishing_app.fishingplace",
+  "pk": 11,
+  "fields": {
+    "name": "Bulgarene Swamps",
+    "slug": "bulgarene-swamps",
+    "place_type": "swamp",
+    "region": "Pleven",
+    "description": "The swamps of the village of Bulgarene are located just before the village, a little difficult to access, but they arouse interest from many locals and not only to practice their favorite sport of fishing. Here, pike is mainly caught, some catfish maybe, and small bream or perch are not excluded. A good place for rest and fishing",
+    "image": "places/bulgarene-swamps.jpg",
+    "map_embed": "<iframe src=\"https://www.google.com/maps/embed?pb=!1m17!1m12!1m3!1d17190.57494911933!2d24.94770920020778!3d43.458924943156255!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m2!1m1!2zNDPCsDI3JzIwLjAiTiAyNMKwNTcnNDguNSJF!5e0!3m2!1sbg!2sbg!4v1770214344361!5m2!1sbg!2sbg\" width=\"600\" height=\"450\" style=\"border:0;\" allowfullscreen=\"\" loading=\"lazy\" referrerpolicy=\"no-referrer-when-downgrade\"></iframe>",
+    "latitude": null,
+    "longitude": null,
+    "methods": [
+      2,
+      3
+    ],
+    "fishes": [
+      1,
+      10,
+      6,
+      7
+    ]
+  }
+},
+{
+  "model": "fishing_app.fishingplace",
+  "pk": 12,
+  "fields": {
+    "name": "Kamenec Dam",
+    "slug": "kamenec-dam",
+    "place_type": "lake",
+    "region": "Levski",
+    "description": "Kamenets Dam is located near the village of Kamenets, Levski Municipality, Pleven District. It was built in 1958-59 and is of regional importance. The reservoir is popular for fishing for crucian carp, perch and carp. Fishing is often paid, with options for entry with included fishing rods and payment for the fish per kilogram.",
+    "image": "places/qzovir-kamenec.jfif",
+    "map_embed": "<iframe src=\"https://www.google.com/maps/embed?pb=!1m13!1m8!1m3!1d11604.743293500716!2d25.035850661183!3d43.352223500076!3m2!1i1024!2i768!4f13.1!3m2!1m1!2zNDPCsDIxJzA4LjAiTiAyNcKwMDInMDkuMSJF!5e0!3m2!1sbg!2sbg!4v1777101264686!5m2!1sbg!2sbg\" width=\"600\" height=\"450\" style=\"border:0;\" allowfullscreen=\"\" loading=\"lazy\" referrerpolicy=\"no-referrer-when-downgrade\"></iframe>",
+    "latitude": null,
+    "longitude": null,
+    "methods": [
+      1,
+      2,
+      4,
+      5
+    ],
+    "fishes": [
+      4,
+      5,
+      6
+    ]
+  }
+},
+{
+  "model": "blog.post",
+  "pk": 1,
+  "fields": {
+    "location": 2,
+    "title": "dasdadsasa",
+    "slug": "dasdadsasa",
+    "author": [
+      "ivchu"
+    ],
+    "image": "blog_images/ivailo-photo.jpg",
+    "content": "adsdsadsadasdasdas",
+    "created_on": "2026-05-01T19:07:11.666Z",
+    "status": "1"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 1,
+  "fields": {
+    "action_time": "2026-02-03T11:12:00.451Z",
+    "user": [
+      "ivchu"
+    ],
+    "content_type": [
+      "fishing_app",
+      "method"
+    ],
+    "object_id": "1",
+    "object_repr": "Feeder Fishing",
+    "action_flag": 1,
+    "change_message": "[{\"added\": {}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 2,
+  "fields": {
+    "action_time": "2026-02-03T11:12:32.643Z",
+    "user": [
+      "ivchu"
+    ],
+    "content_type": [
+      "fishing_app",
+      "method"
+    ],
+    "object_id": "1",
+    "object_repr": "Feeder Fishing",
+    "action_flag": 2,
+    "change_message": "[{\"changed\": {\"fields\": [\"Description of the tactic\"]}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 3,
+  "fields": {
+    "action_time": "2026-02-03T11:14:53.857Z",
+    "user": [
+      "ivchu"
+    ],
+    "content_type": [
+      "fishing_app",
+      "method"
+    ],
+    "object_id": "2",
+    "object_repr": "Bolognese",
+    "action_flag": 1,
+    "change_message": "[{\"added\": {}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 4,
+  "fields": {
+    "action_time": "2026-02-03T11:15:39.617Z",
+    "user": [
+      "ivchu"
+    ],
+    "content_type": [
+      "fishing_app",
+      "method"
+    ],
+    "object_id": "3",
+    "object_repr": "Spining Fishing",
+    "action_flag": 1,
+    "change_message": "[{\"added\": {}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 5,
+  "fields": {
+    "action_time": "2026-02-03T11:15:51.391Z",
+    "user": [
+      "ivchu"
+    ],
+    "content_type": [
+      "fishing_app",
+      "method"
+    ],
+    "object_id": "2",
+    "object_repr": "Bolognese Fishing",
+    "action_flag": 2,
+    "change_message": "[{\"changed\": {\"fields\": [\"Method\"]}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 6,
+  "fields": {
+    "action_time": "2026-02-03T11:16:38.382Z",
+    "user": [
+      "ivchu"
+    ],
+    "content_type": [
+      "fishing_app",
+      "fish"
+    ],
+    "object_id": "1",
+    "object_repr": "Pike",
+    "action_flag": 1,
+    "change_message": "[{\"added\": {}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 7,
+  "fields": {
+    "action_time": "2026-02-03T11:16:43.343Z",
+    "user": [
+      "ivchu"
+    ],
+    "content_type": [
+      "fishing_app",
+      "fish"
+    ],
+    "object_id": "2",
+    "object_repr": "Moronage",
+    "action_flag": 1,
+    "change_message": "[{\"added\": {}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 8,
+  "fields": {
+    "action_time": "2026-02-03T11:16:48.377Z",
+    "user": [
+      "ivchu"
+    ],
+    "content_type": [
+      "fishing_app",
+      "fish"
+    ],
+    "object_id": "3",
+    "object_repr": "Barbel",
+    "action_flag": 1,
+    "change_message": "[{\"added\": {}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 9,
+  "fields": {
+    "action_time": "2026-02-03T11:16:51.779Z",
+    "user": [
+      "ivchu"
+    ],
+    "content_type": [
+      "fishing_app",
+      "fish"
+    ],
+    "object_id": "4",
+    "object_repr": "Carp",
+    "action_flag": 1,
+    "change_message": "[{\"added\": {}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 10,
+  "fields": {
+    "action_time": "2026-02-03T11:17:18.099Z",
+    "user": [
+      "ivchu"
+    ],
+    "content_type": [
+      "fishing_app",
+      "fish"
+    ],
+    "object_id": "5",
+    "object_repr": "Cupid",
+    "action_flag": 1,
+    "change_message": "[{\"added\": {}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 11,
+  "fields": {
+    "action_time": "2026-02-03T11:17:34.673Z",
+    "user": [
+      "ivchu"
+    ],
+    "content_type": [
+      "fishing_app",
+      "fish"
+    ],
+    "object_id": "6",
+    "object_repr": "a cockroach",
+    "action_flag": 1,
+    "change_message": "[{\"added\": {}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 12,
+  "fields": {
+    "action_time": "2026-02-03T11:18:01.196Z",
+    "user": [
+      "ivchu"
+    ],
+    "content_type": [
+      "fishing_app",
+      "fish"
+    ],
+    "object_id": "7",
+    "object_repr": "Perch",
+    "action_flag": 1,
+    "change_message": "[{\"added\": {}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 13,
+  "fields": {
+    "action_time": "2026-02-03T11:18:12.408Z",
+    "user": [
+      "ivchu"
+    ],
+    "content_type": [
+      "fishing_app",
+      "fish"
+    ],
+    "object_id": "6",
+    "object_repr": "Cockroach",
+    "action_flag": 2,
+    "change_message": "[{\"changed\": {\"fields\": [\"Fish kind\"]}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 14,
+  "fields": {
+    "action_time": "2026-02-03T11:28:29.311Z",
+    "user": [
+      "ivchu"
+    ],
+    "content_type": [
+      "fishing_app",
+      "fishingplace"
+    ],
+    "object_id": "2",
+    "object_repr": "Garden Lake (lake)",
+    "action_flag": 1,
+    "change_message": "[{\"added\": {}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 15,
+  "fields": {
+    "action_time": "2026-02-03T11:31:11.870Z",
+    "user": [
+      "ivchu"
+    ],
+    "content_type": [
+      "fishing_app",
+      "fishingplace"
+    ],
+    "object_id": "3",
+    "object_repr": "Gorni Dabnik (lake)",
+    "action_flag": 1,
+    "change_message": "[{\"added\": {}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 16,
+  "fields": {
+    "action_time": "2026-02-03T11:37:47.160Z",
+    "user": [
+      "ivchu"
+    ],
+    "content_type": [
+      "fishing_app",
+      "fishingplace"
+    ],
+    "object_id": "4",
+    "object_repr": "Vit River (river)",
+    "action_flag": 1,
+    "change_message": "[{\"added\": {}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 17,
+  "fields": {
+    "action_time": "2026-02-03T11:37:57.974Z",
+    "user": [
+      "ivchu"
+    ],
+    "content_type": [
+      "fishing_app",
+      "fish"
+    ],
+    "object_id": "8",
+    "object_repr": "Rasper",
+    "action_flag": 1,
+    "change_message": "[{\"added\": {}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 18,
+  "fields": {
+    "action_time": "2026-02-03T11:38:17.971Z",
+    "user": [
+      "ivchu"
+    ],
+    "content_type": [
+      "fishing_app",
+      "fish"
+    ],
+    "object_id": "9",
+    "object_repr": "Stapler",
+    "action_flag": 1,
+    "change_message": "[{\"added\": {}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 19,
+  "fields": {
+    "action_time": "2026-02-03T11:38:37.960Z",
+    "user": [
+      "ivchu"
+    ],
+    "content_type": [
+      "fishing_app",
+      "fishingplace"
+    ],
+    "object_id": "4",
+    "object_repr": "Vit River (river)",
+    "action_flag": 2,
+    "change_message": "[{\"changed\": {\"fields\": [\"Types of fish here\"]}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 20,
+  "fields": {
+    "action_time": "2026-02-03T12:05:35.558Z",
+    "user": [
+      "ivchu"
+    ],
+    "content_type": [
+      "fishing_app",
+      "fishingplace"
+    ],
+    "object_id": "5",
+    "object_repr": "Pisarovo Swamp (swamp)",
+    "action_flag": 1,
+    "change_message": "[{\"added\": {}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 21,
+  "fields": {
+    "action_time": "2026-02-03T12:05:42.326Z",
+    "user": [
+      "ivchu"
+    ],
+    "content_type": [
+      "fishing_app",
+      "fish"
+    ],
+    "object_id": "10",
+    "object_repr": "Catfish",
+    "action_flag": 1,
+    "change_message": "[{\"added\": {}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 22,
+  "fields": {
+    "action_time": "2026-02-03T12:05:58.423Z",
+    "user": [
+      "ivchu"
+    ],
+    "content_type": [
+      "fishing_app",
+      "fishingplace"
+    ],
+    "object_id": "5",
+    "object_repr": "Pisarovo Swamp (swamp)",
+    "action_flag": 2,
+    "change_message": "[{\"changed\": {\"fields\": [\"Types of fish here\"]}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 23,
+  "fields": {
+    "action_time": "2026-02-03T12:07:00.588Z",
+    "user": [
+      "ivchu"
+    ],
+    "content_type": [
+      "fishing_app",
+      "method"
+    ],
+    "object_id": "4",
+    "object_repr": "Method Feeder",
+    "action_flag": 1,
+    "change_message": "[{\"added\": {}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 24,
+  "fields": {
+    "action_time": "2026-02-03T12:08:02.481Z",
+    "user": [
+      "ivchu"
+    ],
+    "content_type": [
+      "fishing_app",
+      "fishingplace"
+    ],
+    "object_id": "3",
+    "object_repr": "Gorni Dabnik (lake)",
+    "action_flag": 2,
+    "change_message": "[{\"changed\": {\"fields\": [\"Appropriate methods\"]}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 25,
+  "fields": {
+    "action_time": "2026-02-03T12:14:41.195Z",
+    "user": [
+      "ivchu"
+    ],
+    "content_type": [
+      "fishing_app",
+      "fishingplace"
+    ],
+    "object_id": "6",
+    "object_repr": "Gigen Village (river)",
+    "action_flag": 1,
+    "change_message": "[{\"added\": {}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 26,
+  "fields": {
+    "action_time": "2026-02-03T12:20:20.749Z",
+    "user": [
+      "ivchu"
+    ],
+    "content_type": [
+      "fishing_app",
+      "fishingplace"
+    ],
+    "object_id": "7",
+    "object_repr": "Yasen Village (swamp)",
+    "action_flag": 1,
+    "change_message": "[{\"added\": {}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 27,
+  "fields": {
+    "action_time": "2026-02-03T12:27:08.976Z",
+    "user": [
+      "ivchu"
+    ],
+    "content_type": [
+      "fishing_app",
+      "fishingplace"
+    ],
+    "object_id": "8",
+    "object_repr": "Danube River (river)",
+    "action_flag": 1,
+    "change_message": "[{\"added\": {}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 28,
+  "fields": {
+    "action_time": "2026-02-04T06:53:05.510Z",
+    "user": [
+      "ivchu"
+    ],
+    "content_type": [
+      "fishing_app",
+      "fishingplace"
+    ],
+    "object_id": "6",
+    "object_repr": "Iskar River at Gigen Village (river)",
+    "action_flag": 2,
+    "change_message": "[{\"changed\": {\"fields\": [\"Object\"]}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 29,
+  "fields": {
+    "action_time": "2026-02-04T07:17:03.258Z",
+    "user": [
+      "ivchu"
+    ],
+    "content_type": [
+      "fishing_app",
+      "fishingplace"
+    ],
+    "object_id": "4",
+    "object_repr": "Vit River (river)",
+    "action_flag": 2,
+    "change_message": "[{\"changed\": {\"fields\": [\"Google Maps Embed Code\"]}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 30,
+  "fields": {
+    "action_time": "2026-02-04T07:21:19.599Z",
+    "user": [
+      "ivchu"
+    ],
+    "content_type": [
+      "fishing_app",
+      "fishingplace"
+    ],
+    "object_id": "7",
+    "object_repr": "Yasen Village (swamp)",
+    "action_flag": 2,
+    "change_message": "[{\"changed\": {\"fields\": [\"Google Maps Embed Code\"]}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 31,
+  "fields": {
+    "action_time": "2026-02-04T07:23:07.601Z",
+    "user": [
+      "ivchu"
+    ],
+    "content_type": [
+      "fishing_app",
+      "fishingplace"
+    ],
+    "object_id": "6",
+    "object_repr": "Iskar River (river)",
+    "action_flag": 2,
+    "change_message": "[{\"changed\": {\"fields\": [\"Object\", \"Google Maps Embed Code\"]}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 32,
+  "fields": {
+    "action_time": "2026-02-04T07:23:26.151Z",
+    "user": [
+      "ivchu"
+    ],
+    "content_type": [
+      "fishing_app",
+      "fishingplace"
+    ],
+    "object_id": "4",
+    "object_repr": "Vit River (river)",
+    "action_flag": 2,
+    "change_message": "[{\"changed\": {\"fields\": [\"Slug\"]}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 33,
+  "fields": {
+    "action_time": "2026-02-04T07:23:44.082Z",
+    "user": [
+      "ivchu"
+    ],
+    "content_type": [
+      "fishing_app",
+      "fishingplace"
+    ],
+    "object_id": "7",
+    "object_repr": "Yasen Swamps (swamp)",
+    "action_flag": 2,
+    "change_message": "[{\"changed\": {\"fields\": [\"Object\"]}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 34,
+  "fields": {
+    "action_time": "2026-02-04T07:26:44.540Z",
+    "user": [
+      "ivchu"
+    ],
+    "content_type": [
+      "fishing_app",
+      "fishingplace"
+    ],
+    "object_id": "2",
+    "object_repr": "Garden Lake (lake)",
+    "action_flag": 2,
+    "change_message": "[{\"changed\": {\"fields\": [\"Slug\", \"Google Maps Embed Code\"]}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 35,
+  "fields": {
+    "action_time": "2026-02-04T07:27:44.955Z",
+    "user": [
+      "ivchu"
+    ],
+    "content_type": [
+      "fishing_app",
+      "fishingplace"
+    ],
+    "object_id": "2",
+    "object_repr": "Garden Lake (lake)",
+    "action_flag": 2,
+    "change_message": "[]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 36,
+  "fields": {
+    "action_time": "2026-02-04T07:28:16.506Z",
+    "user": [
+      "ivchu"
+    ],
+    "content_type": [
+      "fishing_app",
+      "fishingplace"
+    ],
+    "object_id": "2",
+    "object_repr": "Garden Lake (lake)",
+    "action_flag": 2,
+    "change_message": "[{\"changed\": {\"fields\": [\"Slug\"]}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 37,
+  "fields": {
+    "action_time": "2026-02-04T07:34:44.501Z",
+    "user": [
+      "ivchu"
+    ],
+    "content_type": [
+      "fishing_app",
+      "fishingplace"
+    ],
+    "object_id": "3",
+    "object_repr": "Gorni Dabnik (lake)",
+    "action_flag": 2,
+    "change_message": "[{\"changed\": {\"fields\": [\"Types of fish here\", \"Google Maps Embed Code\"]}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 38,
+  "fields": {
+    "action_time": "2026-02-04T07:38:53.749Z",
+    "user": [
+      "ivchu"
+    ],
+    "content_type": [
+      "fishing_app",
+      "fishingplace"
+    ],
+    "object_id": "8",
+    "object_repr": "Danube River (river)",
+    "action_flag": 2,
+    "change_message": "[{\"changed\": {\"fields\": [\"Google Maps Embed Code\"]}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 39,
+  "fields": {
+    "action_time": "2026-02-04T07:41:43.485Z",
+    "user": [
+      "ivchu"
+    ],
+    "content_type": [
+      "fishing_app",
+      "fishingplace"
+    ],
+    "object_id": "5",
+    "object_repr": "Pisarovo Swamp (swamp)",
+    "action_flag": 2,
+    "change_message": "[{\"changed\": {\"fields\": [\"Google Maps Embed Code\"]}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 40,
+  "fields": {
+    "action_time": "2026-02-04T08:16:02.104Z",
+    "user": [
+      "ivchu"
+    ],
+    "content_type": [
+      "fishing_app",
+      "fishingplace"
+    ],
+    "object_id": "3",
+    "object_repr": "Gorni Dabnik (lake)",
+    "action_flag": 2,
+    "change_message": "[{\"changed\": {\"fields\": [\"Type of reservoir\"]}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 41,
+  "fields": {
+    "action_time": "2026-02-04T08:16:09.647Z",
+    "user": [
+      "ivchu"
+    ],
+    "content_type": [
+      "fishing_app",
+      "fishingplace"
+    ],
+    "object_id": "2",
+    "object_repr": "Garden Lake (lake)",
+    "action_flag": 2,
+    "change_message": "[{\"changed\": {\"fields\": [\"Type of reservoir\"]}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 42,
+  "fields": {
+    "action_time": "2026-02-04T09:44:50.659Z",
+    "user": [
+      "ivchu"
+    ],
+    "content_type": [
+      "fishing_app",
+      "fishingplace"
+    ],
+    "object_id": "3",
+    "object_repr": "Gorni Dabnik (lake)",
+    "action_flag": 2,
+    "change_message": "[]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 43,
+  "fields": {
+    "action_time": "2026-02-04T10:38:13.010Z",
+    "user": [
+      "ivchu"
+    ],
+    "content_type": [
+      "fishing_app",
+      "fishingplace"
+    ],
+    "object_id": "2",
+    "object_repr": "Garden Lake (lake)",
+    "action_flag": 2,
+    "change_message": "[{\"changed\": {\"fields\": [\"Info for location\", \"Appropriate methods\"]}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 44,
+  "fields": {
+    "action_time": "2026-02-04T13:03:59.799Z",
+    "user": [
+      "ivchu"
+    ],
+    "content_type": [
+      "fishing_app",
+      "method"
+    ],
+    "object_id": "2",
+    "object_repr": "Bolognese Fishing",
+    "action_flag": 2,
+    "change_message": "[{\"changed\": {\"fields\": [\"Slug\"]}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 45,
+  "fields": {
+    "action_time": "2026-02-04T13:04:46.018Z",
+    "user": [
+      "ivchu"
+    ],
+    "content_type": [
+      "fishing_app",
+      "method"
+    ],
+    "object_id": "2",
+    "object_repr": "Bolognese Fishing",
+    "action_flag": 2,
+    "change_message": "[{\"changed\": {\"fields\": [\"Slug\"]}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 46,
+  "fields": {
+    "action_time": "2026-02-04T13:05:00.504Z",
+    "user": [
+      "ivchu"
+    ],
+    "content_type": [
+      "fishing_app",
+      "method"
+    ],
+    "object_id": "2",
+    "object_repr": "Bolognese Fishing",
+    "action_flag": 2,
+    "change_message": "[{\"changed\": {\"fields\": [\"Slug\"]}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 47,
+  "fields": {
+    "action_time": "2026-02-04T13:53:00.012Z",
+    "user": [
+      "ivchu"
+    ],
+    "content_type": [
+      "fishing_app",
+      "fishingplace"
+    ],
+    "object_id": "9",
+    "object_repr": "Osam River (river)",
+    "action_flag": 1,
+    "change_message": "[{\"added\": {}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 48,
+  "fields": {
+    "action_time": "2026-02-04T14:00:38.026Z",
+    "user": [
+      "ivchu"
+    ],
+    "content_type": [
+      "fishing_app",
+      "fish"
+    ],
+    "object_id": "11",
+    "object_repr": "Bream",
+    "action_flag": 1,
+    "change_message": "[{\"added\": {}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 49,
+  "fields": {
+    "action_time": "2026-02-04T14:04:31.139Z",
+    "user": [
+      "ivchu"
+    ],
+    "content_type": [
+      "fishing_app",
+      "fishingplace"
+    ],
+    "object_id": "10",
+    "object_repr": "Totlebenov Val dam (lake)",
+    "action_flag": 1,
+    "change_message": "[{\"added\": {}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 50,
+  "fields": {
+    "action_time": "2026-02-04T14:04:39.126Z",
+    "user": [
+      "ivchu"
+    ],
+    "content_type": [
+      "fishing_app",
+      "fishingplace"
+    ],
+    "object_id": "10",
+    "object_repr": "Totlebenov Val dam (lake)",
+    "action_flag": 2,
+    "change_message": "[{\"changed\": {\"fields\": [\"Types of fish here\"]}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 51,
+  "fields": {
+    "action_time": "2026-02-04T14:04:53.106Z",
+    "user": [
+      "ivchu"
+    ],
+    "content_type": [
+      "fishing_app",
+      "fishingplace"
+    ],
+    "object_id": "8",
+    "object_repr": "Danube River (river)",
+    "action_flag": 2,
+    "change_message": "[{\"changed\": {\"fields\": [\"Types of fish here\"]}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 52,
+  "fields": {
+    "action_time": "2026-02-04T14:05:00.661Z",
+    "user": [
+      "ivchu"
+    ],
+    "content_type": [
+      "fishing_app",
+      "fishingplace"
+    ],
+    "object_id": "9",
+    "object_repr": "Osam River (river)",
+    "action_flag": 2,
+    "change_message": "[{\"changed\": {\"fields\": [\"Types of fish here\"]}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 53,
+  "fields": {
+    "action_time": "2026-02-04T14:05:14.856Z",
+    "user": [
+      "ivchu"
+    ],
+    "content_type": [
+      "fishing_app",
+      "fishingplace"
+    ],
+    "object_id": "6",
+    "object_repr": "Iskar River (river)",
+    "action_flag": 2,
+    "change_message": "[{\"changed\": {\"fields\": [\"Types of fish here\"]}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 54,
+  "fields": {
+    "action_time": "2026-02-04T14:05:34.562Z",
+    "user": [
+      "ivchu"
+    ],
+    "content_type": [
+      "fishing_app",
+      "fishingplace"
+    ],
+    "object_id": "4",
+    "object_repr": "Vit River (river)",
+    "action_flag": 2,
+    "change_message": "[{\"changed\": {\"fields\": [\"Types of fish here\"]}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 55,
+  "fields": {
+    "action_time": "2026-02-04T14:06:31.517Z",
+    "user": [
+      "ivchu"
+    ],
+    "content_type": [
+      "fishing_app",
+      "fishingplace"
+    ],
+    "object_id": "8",
+    "object_repr": "Danube River (river)",
+    "action_flag": 2,
+    "change_message": "[{\"changed\": {\"fields\": [\"Region\"]}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 56,
+  "fields": {
+    "action_time": "2026-02-04T14:06:55.929Z",
+    "user": [
+      "ivchu"
+    ],
+    "content_type": [
+      "fishing_app",
+      "fishingplace"
+    ],
+    "object_id": "9",
+    "object_repr": "Osam River (river)",
+    "action_flag": 2,
+    "change_message": "[{\"changed\": {\"fields\": [\"Region\"]}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 57,
+  "fields": {
+    "action_time": "2026-02-04T14:07:17.224Z",
+    "user": [
+      "ivchu"
+    ],
+    "content_type": [
+      "fishing_app",
+      "fishingplace"
+    ],
+    "object_id": "5",
+    "object_repr": "Pisarovo Swamp (swamp)",
+    "action_flag": 2,
+    "change_message": "[{\"changed\": {\"fields\": [\"Region\"]}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 58,
+  "fields": {
+    "action_time": "2026-02-04T14:07:31.865Z",
+    "user": [
+      "ivchu"
+    ],
+    "content_type": [
+      "fishing_app",
+      "fishingplace"
+    ],
+    "object_id": "3",
+    "object_repr": "Gorni Dabnik (lake)",
+    "action_flag": 2,
+    "change_message": "[{\"changed\": {\"fields\": [\"Region\"]}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 59,
+  "fields": {
+    "action_time": "2026-02-04T14:18:19.913Z",
+    "user": [
+      "ivchu"
+    ],
+    "content_type": [
+      "fishing_app",
+      "fishingplace"
+    ],
+    "object_id": "11",
+    "object_repr": "Bulgarene Swamps (swamp)",
+    "action_flag": 1,
+    "change_message": "[{\"added\": {}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 60,
+  "fields": {
+    "action_time": "2026-04-24T11:59:44.537Z",
+    "user": [
+      "ivchu"
+    ],
+    "content_type": [
+      "fishing_app",
+      "method"
+    ],
+    "object_id": "5",
+    "object_repr": "Float Fishing",
+    "action_flag": 1,
+    "change_message": "[{\"added\": {}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 61,
+  "fields": {
+    "action_time": "2026-04-24T12:00:39.854Z",
+    "user": [
+      "ivchu"
+    ],
+    "content_type": [
+      "fishing_app",
+      "method"
+    ],
+    "object_id": "1",
+    "object_repr": "Feeder Fishing",
+    "action_flag": 2,
+    "change_message": "[]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 62,
+  "fields": {
+    "action_time": "2026-04-25T07:06:39.212Z",
+    "user": [
+      "ivchu"
+    ],
+    "content_type": [
+      "fishing_app",
+      "fishingplace"
+    ],
+    "object_id": "5",
+    "object_repr": "Pisarovo Swamps (swamp)",
+    "action_flag": 2,
+    "change_message": "[{\"changed\": {\"fields\": [\"Object\", \"Slug\", \"Region\"]}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 63,
+  "fields": {
+    "action_time": "2026-04-25T07:14:42.618Z",
+    "user": [
+      "ivchu"
+    ],
+    "content_type": [
+      "fishing_app",
+      "fishingplace"
+    ],
+    "object_id": "12",
+    "object_repr": "Kamenec Dam (lake)",
+    "action_flag": 1,
+    "change_message": "[{\"added\": {}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 64,
+  "fields": {
+    "action_time": "2026-04-25T07:53:33.631Z",
+    "user": [
+      "ivchu"
+    ],
+    "content_type": [
+      "fishing_app",
+      "fishingplace"
+    ],
+    "object_id": "2",
+    "object_repr": "Garden Lake (lake)",
+    "action_flag": 2,
+    "change_message": "[{\"changed\": {\"fields\": [\"Latitude\", \"Longitude\"]}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 65,
+  "fields": {
+    "action_time": "2026-04-25T07:55:07.283Z",
+    "user": [
+      "ivchu"
+    ],
+    "content_type": [
+      "fishing_app",
+      "fishingplace"
+    ],
+    "object_id": "2",
+    "object_repr": "Garden Lake (lake)",
+    "action_flag": 2,
+    "change_message": "[{\"changed\": {\"fields\": [\"Latitude\", \"Longitude\"]}}]"
+  }
+}
+]
