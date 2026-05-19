@@ -1,0 +1,27 @@
+{% extends 'base.html' %}
+{% load static %}
+
+{% block content %}
+<div class="explorer-container">
+    
+    <h2 class="explorer-title">
+        Всички {{ title }} в Плевенският регион
+    </h2>
+    <div class="explorer-grid">
+        {% for place in places %}
+        <div class="explorer-card" style="background-image: url('{{ place.image.url }}');">
+            <div class="card-overlay">
+                <h3>{{ place.name }}</h3>
+                <p>{{ place.description|truncatechars:60 }}</p>
+                <a href="{% url 'place_detail' place.slug %}" class="btn-view-place">Разгледай</a>
+            </div>
+        </div>
+        {% empty %}
+        <p class="empty-message">Все още няма добавени водоеми в тази категория.</p>
+        {% endfor %}
+    </div>
+    <div class="back-link-wrapper">
+        <a href="{% url 'discover' %}" class="btn-back-link">← Назад към откритията</a>
+    </div>
+</div>
+{% endblock %}
